@@ -1,10 +1,68 @@
-body {
-	color: #808080;
-	font-family:Monospace;
-	font-size:13px;
-	text-align:center;
+* {
+	font-family: Monospace;
+}
 
-	background-color: #ffffff;
-	margin: 0px;
+body {
+	margin: 0;
 	overflow: hidden;
+}
+
+h1 {
+	position: absolute;
+	margin-top: 3%;
+	margin-left: 7.5%;
+	color: white;
+	z-index: 2;
+}
+
+canvas {
+	position: absolute;
+	z-index: 0;
+}
+
+#mainHeader {
+	width: 100%;
+	padding: 2%;
+	background-color: gray;
+	z-index: 1;
+}
+
+#mainHeader ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	margin-left: 25%;
+}
+
+#mainHeader li {
+	float: left;
+	display: inline;
+	margin-left: 0;
+	padding: 10px;
+	right: 0;
+}
+
+#mainHeader li a {
+	display: block;
+	text-align: center;
+	padding: 8px 11px;
+	text-decoration: none;
+	background-color: black;
+	color: gray;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+#mainHeader li a:hover {
+	color: white;
+}
+
+.active {
+	color: white;
+}
+
+#mainMenu {
+	background-color: black;
+	width: 100%;
 }
