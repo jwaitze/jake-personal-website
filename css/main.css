@@ -4,7 +4,6 @@
 
 body {
 	margin: 0;
-	overflow: hidden;
 }
 
 h1 {
@@ -17,14 +16,16 @@ h1 {
 
 canvas {
 	position: absolute;
-	z-index: 0;
+	top: 0;
+	z-index: -1;
 }
 
 #mainHeader {
-	width: 100%;
+	width: 96%;
 	padding: 2%;
-	background-color: gray;
-	z-index: 1;
+	background-color: #C0C0C0;
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 #mainHeader ul {
@@ -61,4 +62,18 @@ canvas {
 #mainMenu {
 	background-color: black;
 	width: 100%;
+	z-index: 9999;
+}
+
+#mainNote {
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 10%;
+	padding: 35%;
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#mainNote p {
+	color: #DCDCDC;
 }
