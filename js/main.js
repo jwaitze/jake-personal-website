@@ -13,17 +13,17 @@ function hideMainBody() {
 }
 
 function mainContent() {
-	var myPhone = 'Pho'+'ne: '+'8'+'6'+'0'+' '+'5'+'0'+'5'+' '+'9'+'6'+'9'+'4';
-	var myEmail = 'Ema'+'il: '+'Jake'+String.fromCharCode(64)+'Waitze'+'.net'
+	var myPhone = ' '+'8'+'6'+'0'+' '+'5'+'0'+'5'+' '+'9'+'6'+'9'+'4';
+	var myEmail = ' '+'Jake'+String.fromCharCode(64)+'Waitze'+'.net'
 	var phoneElement = document.getElementById('hiddenPhone');
 	var emailElement = document.getElementById('hiddenEmail');
 
 	if ( phoneElement != null ) {
-		phoneElement.innerText = myPhone;
+		phoneElement.innerHTML += myPhone;
 	}
 	
 	if ( emailElement != null ) {
-		emailElement.innerText = myEmail;
+		emailElement.innerHTML += myEmail;
 	}
 
 	var closeBodyElement = document.getElementById('closeBody');
