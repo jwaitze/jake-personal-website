@@ -13,6 +13,8 @@ function hideMainBody() {
 }
 
 function mainContent() {
+
+	// this is for preventing crawlers from taking my information
 	var myPhone = ' '+'8'+'6'+'0'+' '+'5'+'0'+'5'+' '+'9'+'6'+'9'+'4';
 	var myEmail = ' '+'Jake'+String.fromCharCode(64)+'Waitze'+'.net'
 	var phoneElement = document.getElementById('hiddenPhone');
@@ -55,6 +57,8 @@ function init() {
 
 	birds = [];
 	boids = [];
+
+	// mrdoob
 
 	for ( var i = 0; i < 200; i ++ ) {
 		boid = boids[ i ] = new Boid();

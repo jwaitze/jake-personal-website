@@ -8,5 +8,3 @@
 - IRC
 
 Feel free to use it and re-use it in any way you would like.
-
-Creds to mrdoob for the original version of the birds.
