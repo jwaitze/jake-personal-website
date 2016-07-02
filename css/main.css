@@ -4,15 +4,17 @@
 
 body {
 	margin: 0;
-	background-color: #191919;
+	background-color: #191919; /* same color as animation background */
 }
 
+/* put the animation at the back, stuck in place, stuck to the top of the doc */
 canvas {
 	position: fixed;
 	top: 0;
 	z-index: -1;
 }
 
+/* remove default link styling */
 a {
 	text-decoration: none;
 }
@@ -27,6 +29,7 @@ h2 {
 	color: rgba(255,255,255,0.75);
 }
 
+/* h1 is always white unless hovered over */
 h1:hover {
 	color: gray;
 }
@@ -35,11 +38,12 @@ h1:hover {
 	position: relative;
 	width: 100%;
 	padding-top: 11%;
-	background-color: #C0C0C0;
+	background-color: #C0C0C0; /* light gray */
 	opacity: 0.80;
     filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
+/* lays partially on top of light-gray rectangle header */
 #mainMenu {
 	position: absolute;
 	background-color: black;
@@ -51,27 +55,26 @@ h1:hover {
 
 }
 
-#mainMenu li #activePage {
-	color: white;
-}
-
-#mainMenu li #activePage:hover {
-	color: gray;
-}
-
+/* remove default list styling(ew) and any pre-existing offsets */
 #mainMenu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-#mainMenu li {
-	background-color: black;
-	float: left;
-	display: inline-block;
-	margin-left: 0;
-	padding: 2% 0.75%;
-	text-align: center;
+/* this is for marking of the current page */
+#mainMenu li #activePage {
+	color: white;
+}
+
+/* the current page is always marked as white, so if we hover it, we want gray */
+#mainMenu li #activePage:hover {
+	color: gray;
+}
+
+/* non active links are gray, so if we hover we want white */
+#mainMenu li a:hover {
+	color: white;
 }
 
 #mainMenu li a {
@@ -83,27 +86,31 @@ h1:hover {
 	line-height: 10px;
 }
 
-#mainMenu li a:hover {
-	color: white;
+#mainMenu li {
+	background-color: black;
+	float: left;
+	display: inline-block;
+	margin-left: 0;
+	padding: 2% 0.75%;
+	text-align: center;
 }
 
 #mainBody {
+	/* rounded bottom */
 	border-bottom-left-radius: 5%;
 	border-bottom-right-radius: 5%;
-	padding: 1% 5% 5% 5%;
+	padding: 1% 5% 5% 5%; /* more space on all sides but top */
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-bottom: 5%;
 	background-color: rgba(0,0,0,0.80);
 }
 
+/* our paragraphs in the main body are always indented and spaced */
 #mainBody p {
     text-indent: 50px;
     line-height: 25px;
-}
-
-#mainBody p {
-	font-size: 1.1em;
+    font-size: 1em;
 	color: #DCDCDC;
 }
 
@@ -171,6 +178,7 @@ hr.fadingStyle {
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
+/* flips the go icon a quarter ways around */
 #goIcon {
 	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
