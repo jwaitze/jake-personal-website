@@ -1,4 +1,14 @@
-function createContent() {}
+function unhideMainBody() {}
+
+function hideMainBody() {
+	//var body = document.getElementById('mainBody');
+	//body.setAttribute('display', 'none')
+}
+
+function createContent() {
+	document.getElementById('#hiddenPhone').value = 'Phone: test';
+	document.getElementById('hiddenEmail').value = 'Email: test';
+}
 
 var SCREEN_WIDTH = window.innerWidth,
 SCREEN_HEIGHT = window.innerHeight,
@@ -46,6 +56,8 @@ function init() {
 
 	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 	window.addEventListener( 'resize', onWindowResize, false );
+
+	createContent();
 }
 
 function onWindowResize() {
