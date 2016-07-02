@@ -7,17 +7,29 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<a href="/"><h1>Jake Waitze</h1></a>
+		<script src="js/three.min.js"></script>
+		<script src="js/Projector.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+		<script src="js/Bird.js"></script>
+		<script src="js/Boid.js"></script>
+		<script src="js/main.js"></script>
 		<div id="mainHeader">
 			<div id="mainMenu">
 				<ul>
+					<li><a href="/"><h1>Jake Waitze</h1></a></li>
 					<li><a href="/">Home</a></li>
+					<li>
+						<div class="dropdown">
+							<span>Test</span>
+							<div class="dropdown-content">
+								<span>test</span>
+							</div>
+						</div>
+					</li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Chat</a></li>
-					<li><a href="https://github.com/jwaitze">GitHub</a></li>
-					<li><a href="https://twitter.com/jwaitze">Twitter</a></li>
 					<li><a href="/resume">Résumé</a></li>
-					<li style="float:right;margin-right:5%"><a href="#">Contact</a></li>
+					<li id="keepRight"><a href="#">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -26,11 +38,5 @@
 		</div>
 		<div id="mainBody"></div>
 		<div id="mainFooter"></div>
-		<script src="js/three.min.js"></script>
-		<script src="js/Projector.js"></script>
-		<script src="js/CanvasRenderer.js"></script>
-		<script src="js/Bird.js"></script>
-		<script src="js/Boid.js"></script>
-		<script src="js/main.js"></script>
 	</body>
 </html>
