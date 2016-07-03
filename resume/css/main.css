@@ -1,45 +1,45 @@
+* {
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
 li {
   list-style-type: disc;
   list-style-image: none;
   margin: 5px;
 }
 
-.sectionlabel {
+.namelabel, .sectionlabel {
   border-bottom: #cccccc 1px solid;
-  font-weight: bold;
+  font-size: 120%;
   margin-bottom: 5px;
   width: 100%;
 }
 
 .namelabel {
-  border-bottom: #cccccc 1px solid;
-  font-size: 120%;
   font-weight: bold;
-  margin-bottom: 5px;
-  width: 100%;
 }
 
 table.template td {
   color: #000000;
-  font-family: sans-serif;
-  font-size: 12px;
 }
 
 body {
   background: #E0EEEE;
-  margin: 2%;
+  margin: 3%;
 }
 
 td {
   background: transparent;
   color: #000000;
-  font-family: sans-serif;
-  font-size: 12px;
 }
 
 #sectiontitle {
-  color:#000000;
-  font-family:sans-serif;
-  font-size:12px;
-  width:100%;
+  color: #000000;
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
