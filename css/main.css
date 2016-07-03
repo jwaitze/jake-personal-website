@@ -34,13 +34,46 @@ a {
 	text-decoration: none;
 }
 
+/* next five rules apply to the footer */
+html, body {
+	height: 100%;
+}
+
+.nonFooterContent {
+	min-height: 100%;
+	margin-bottom: -25px;
+}
+
+.nonFooterContent:after {
+	content: "";
+	display: block;
+}
+
+.mainFooter, .nonFooterContent:after {
+	height: 25px;
+}
+
+.mainFooter, #mainHeader {
+	background: #C0C0C0;
+	opacity: 0.80;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.mainFooter span {
+	float: right;
+	margin-right: 10%;
+	margin-top: 6px;
+}
+
+.mainFooter a {
+	color: black;
+	text-decoration: underline;
+}
+
 #mainHeader {
 	position: relative;
 	width: 100%;
 	padding-top: 11%;
-	background-color: #C0C0C0; /* light gray */
-	opacity: 0.80;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
 /* lays partially on top of light-gray rectangle header */
