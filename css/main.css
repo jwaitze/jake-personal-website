@@ -45,10 +45,9 @@ h1:hover {
 
 /* lays partially on top of light-gray rectangle header */
 #mainMenu {
-	position: absolute;
+	position: relative;
 	background-color: black;
 	width: 96%;
-	z-index: 5;
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-top: -9%;
@@ -79,7 +78,6 @@ h1:hover {
 
 #mainMenu li a {
 	display: block;
-	padding: 8px 11px;
 	color: gray;
 	font-size: 1.1em;
 	font-weight: bold;
@@ -91,8 +89,21 @@ h1:hover {
 	float: left;
 	display: inline-block;
 	margin-left: 0;
-	padding: 2% 0.75%;
+	padding: 3%;
 	text-align: center;
+	width: 5%;
+}
+
+/* this is h1 in this instance, and i want room for the larger text */
+#mainMenu li:first-of-type {
+	width: 18%;
+	padding: 3% 9% 3% 3%;
+	white-space: nowrap;
+}
+
+/* extra padding on the right side for the last list item in the menu */
+#mainMenu li:last-of-type {
+	padding: 3% 6% 3% 3%;
 }
 
 #mainBody {
@@ -120,9 +131,9 @@ h1:hover {
     display: inline;
 }
 
+/* same styling as #mainMenu "li a" for now */
 .dropdown span {
 	display: block;
-	padding: 8px 11px;
 	color: gray;
 	font-size: 1.1em;
 	font-weight: bold;
@@ -161,14 +172,20 @@ h1:hover {
     padding: 12px 16px;
 }
 
+.dropdown-content span {
+	padding: 7.5% 2%;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* cleans floats */
 .clearfix {
   overflow: auto;
 }
 
+/* thank to who suggested this @ A100 */
 hr.fadingStyle {
     border: 0;
     height: 1px;
@@ -183,4 +200,33 @@ hr.fadingStyle {
 	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
+}
+
+/* responsive to different device sizes */
+@media (max-width: 400px) {
+    html {
+    	font-size: 50%;
+    	line-height: 50%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    html {
+    	font-size: 60%;
+    	line-height: 60%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    html {
+    	font-size: 80%;
+    	line-height: 80%;
+    }
+}
+
+@media (min-width: 801px) {
+    html {
+    	font-size: 100%;
+    	line-height: 100%;
+    }
 }
