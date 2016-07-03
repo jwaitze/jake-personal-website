@@ -145,14 +145,19 @@ html, body {
 	padding: 3% 6% 3% 3%;
 }
 
-#mainBody a {
+#mainBody a, #openBody a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.7);
 	font-size: 90%;
 }
 
-#mainBody a:hover {
+#mainBody a:hover, #openBody a:hover {
 	color: rgba(255,255,255,0.9);
+}
+
+#openBody {
+	padding: 1% 5% 5% 5%; /* more space on all sides but top */
+	margin-right: 10%;
 }
 
 #mainBody {
@@ -167,7 +172,9 @@ html, body {
 }
 
 /* our paragraphs in the main body are always indented and spaced */
-#mainBody p {
+/* apart from our menu items and default h3 settings, our other stuff
+	is always white, or should be, at least */
+#mainBody p, #mainBody li, #mainBody h3 {
     text-indent: 50px;
     line-height: 25px;
     font-size: 1em;
@@ -258,6 +265,11 @@ hr.fadingStyle {
 /* close button goes on the right side */
 #closeBody {
 	float: right;
+}
+
+#openBody {
+	float: right;
+	display: none;
 }
 
 /* cleans floats */

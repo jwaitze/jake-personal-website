@@ -3,12 +3,22 @@ function showMainBody() {
 	if ( mainBody != null ) {
 		mainBody.style.display = 'block';
 	}
+
+	var openBody = document.getElementById('openBody');
+	if ( openBody != null ) {
+		openBody.style.display = 'none';
+	}
 }
 
 function hideMainBody() {
 	var mainBody = document.getElementById('mainBody');
 	if ( mainBody != null ) {
 		mainBody.style.display = 'none';
+	}
+
+	var openBody = document.getElementById('openBody');
+	if ( openBody != null ) {
+		openBody.style.display = 'block';
 	}
 }
 
@@ -32,6 +42,13 @@ function mainContent() {
 	if ( closeBodyElement != null ) {
 		closeBodyElement.onclick = function() {
 			hideMainBody();
+		};
+	}
+
+	var openBodyElement = document.getElementById('openBody');
+	if ( openBodyElement != null ) {
+		openBodyElement.onclick = function() {
+			showMainBody();
 		};
 	}
 }
