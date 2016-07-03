@@ -224,14 +224,14 @@ hr.fadingStyle {
     }
 }
 
-@media (min-width: 401px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 550px) {
     html {
     	font-size: 60%;
     	line-height: 60%;
     }
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 551px) and (max-width: 800px) {
     html {
     	font-size: 80%;
     	line-height: 80%;
