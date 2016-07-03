@@ -219,6 +219,11 @@ html, body {
 	padding: 12.5% 0;
 }
 
+/* drops down less because chat iframe is there */
+#chatPageDropdownContent {
+	margin-top: 8px;
+}
+
 .dropdown-content span {
 	padding: 5%;
 }
@@ -275,6 +280,10 @@ hr.fadingStyle {
 /* cleans floats */
 .clearfix {
   overflow: auto;
+}
+
+#chatFrame {
+	z-index: -1;
 }
 
 /* responsive to different device sizes */
