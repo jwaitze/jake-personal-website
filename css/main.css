@@ -150,12 +150,30 @@ a {
 	line-height: 10px
 }
 
-.dropdown span:hover {
+/* had to single out the tabs to separate selections between the tabs and the dropdown-content */
+.dropdown:hover #menuDropdownTab {
 	color: white;
 }
 
+/* hovering a .dropdown class item will make the dropdown-content within it show */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+	min-width: 200px;
+	padding: 25% 0;
+}
+
 .dropdown-content span {
-	color: black;
+	padding: 5%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
 }
 
 .dropdown-content span:hover {
@@ -167,32 +185,10 @@ a {
 }
 
 .dropdown-content span {
+	color: black;
 	font-size: 1em;
 	font-weight: normal;
 	line-height: 0;
-	padding: 5px auto;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-}
-
-.dropdown-content span {
-	padding: 7.5% 2%;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* cleans floats */
-.clearfix {
-  overflow: auto;
 }
 
 /* thank to who suggested this @ A100 */
@@ -212,8 +208,14 @@ hr.fadingStyle {
     transform: rotate(90deg);
 }
 
+/* close button goes on the right side */
 #closeBody {
 	float: right;
+}
+
+/* cleans floats */
+.clearfix {
+  overflow: auto;
 }
 
 /* responsive to different device sizes */
@@ -222,6 +224,10 @@ hr.fadingStyle {
     	font-size: 50%;
     	line-height: 50%;
     }
+
+    .dropdown-content {
+		min-width: 100px;
+	}
 }
 
 @media (min-width: 401px) and (max-width: 550px) {
@@ -229,6 +235,10 @@ hr.fadingStyle {
     	font-size: 60%;
     	line-height: 60%;
     }
+
+    .dropdown-content {
+		min-width: 120px;
+	}
 }
 
 @media (min-width: 551px) and (max-width: 800px) {
@@ -236,6 +246,10 @@ hr.fadingStyle {
     	font-size: 80%;
     	line-height: 80%;
     }
+
+    .dropdown-content {
+		min-width: 160px;
+	}
 }
 
 @media (min-width: 801px) {
@@ -243,4 +257,8 @@ hr.fadingStyle {
     	font-size: 100%;
     	line-height: 100%;
     }
+
+    .dropdown-content {
+		min-width: 200px;
+	}
 }
