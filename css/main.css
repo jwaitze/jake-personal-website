@@ -14,11 +14,6 @@ canvas {
 	z-index: -1;
 }
 
-/* remove default link styling */
-a {
-	text-decoration: none;
-}
-
 h1 {
 	margin: 0;
 	padding: 0;
@@ -32,6 +27,11 @@ h2 {
 /* h1 is always white unless hovered over */
 h1:hover {
 	color: gray;
+}
+
+/* remove the default underline */
+a {
+	text-decoration: none;
 }
 
 #mainHeader {
@@ -104,6 +104,16 @@ h1:hover {
 /* extra padding on the right side for the last list item in the menu */
 #mainMenu li:last-of-type {
 	padding: 3% 6% 3% 3%;
+}
+
+#mainBody a {
+	text-decoration: none;
+	color: rgba(255,255,255,0.7);
+	font-size: 90%;
+}
+
+#mainBody a:hover {
+	color: rgba(255,255,255,0.9);
 }
 
 #mainBody {
@@ -200,6 +210,10 @@ hr.fadingStyle {
 	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
+}
+
+#closeBody {
+	float: right;
 }
 
 /* responsive to different device sizes */
