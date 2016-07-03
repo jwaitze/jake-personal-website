@@ -94,6 +94,12 @@ a {
 	width: 5%;
 }
 
+.mainMenuChatPageONLYListItems {
+	/* keep !important use to a minimum, only use it when needed and
+		when it wont affect future devs */
+	width: 15% !important;
+}
+
 /* this is h1 in this instance, and i want room for the larger text */
 #mainMenu li:first-of-type {
 	width: 18%;

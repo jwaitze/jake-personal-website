@@ -40,6 +40,7 @@ td {
 }
 
 img {
-    max-width: 100%;
+    width: 175px;
+    max-width: 200%;
     height: auto;
 }
