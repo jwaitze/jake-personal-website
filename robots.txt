@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /they-dont-think-it-be-like-it-is-but-it-do/
+Disallow: /resume/

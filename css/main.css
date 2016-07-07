@@ -49,8 +49,12 @@ html, body {
 	display: block;
 }
 
+.mainFooter {
+	font-weight: bold;
+}
+
 .mainFooter, .nonFooterContent:after {
-	height: 25px;
+	height: 30px;
 }
 
 .mainFooter, #mainHeader {
@@ -62,7 +66,7 @@ html, body {
 .mainFooter span {
 	float: right;
 	margin-right: 10%;
-	margin-top: 6px;
+	margin-top: 9px;
 }
 
 .mainFooter a {
@@ -267,13 +271,18 @@ hr.fadingStyle {
     transform: rotate(90deg);
 }
 
-/* close button goes on the right side */
-#closeBody {
+/* close and open button goes on the right side */
+#closeBody, #openBody {
 	float: right;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#inlineElement {
+	display: inline;
 }
 
 #openBody {
-	float: right;
 	display: none;
 }
 
