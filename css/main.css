@@ -85,10 +85,7 @@ html, body {
 	position: relative;
 	background-color: black;
 	width: 96%;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-top: -9%;
-
+	margin: -9% 2% 2% 2%;
 }
 
 /* remove default list styling(ew) and any pre-existing offsets */
@@ -346,8 +343,8 @@ hr.fadingStyle {
 
 	#mobileMenuList li {
 		list-style-type: none;
-		height: 75px;
-		width: 20%;
+		height: 50px;
+		width: 50%;
 	}
 
 	#mobileMenuList li a:hover, #mobileMenuList li span:hover {
@@ -403,7 +400,7 @@ hr.fadingStyle {
 
 #shortMenu {
 	display: none;
-	padding: 3%;
+	padding: 4%;
 }
 
 #shortMenu h1 {
@@ -447,6 +444,6 @@ hr.fadingStyle {
 
 #mobileMenuList li {
 	padding: 3%;
-	margin: 0 auto;
+	margin: 0 10% 0 0;
 	font-size: 2em;
 }
