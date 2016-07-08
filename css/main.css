@@ -298,6 +298,7 @@ hr.fadingStyle {
 
 #chatFrame {
 	z-index: -1;
+	margin-top: 2%;
 }
 
 /* responsive to different device sizes */
@@ -332,7 +333,7 @@ hr.fadingStyle {
 	.dropdown span {
 		display: block;
 		color: black;
-		font-size: 1.3em;
+		font-size: 1.1em;
 		font-weight: bold;
 		line-height: 10px
 	}
@@ -340,7 +341,7 @@ hr.fadingStyle {
 	#mobileMenuList li a {
 		color: black;
 		font-weight: bold;
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 
 	#mobileMenuList li {

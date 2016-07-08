@@ -11,20 +11,45 @@
     <body>
         <div class="nonFooterContent">
             <div id="mainHeader">
+                <div id="mobileMenu">
+                    <a id="closeMobileMenu" href="#">x</a>
+                    <ul id="mobileMenuList">
+                        <li><a href="../">Home</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <span class="menuDropdownTab">Contact</span>
+                                <div class="dropdown-content">
+                                    <a class="hiddenPhoneLink" href="tel:"><p class="hiddenPhone"><i class="fa fa-phone" aria-hidden="true"></i> </p></a>
+                                    <hr class="fadingStyle">
+                                    <a class="hiddenEmailLink" href="mailto:"><p class="hiddenEmail"><i class="fa fa-envelope" aria-hidden="true"></i> </p></a>
+                                    <hr class="fadingStyle">
+                                    <a href="../resume" target="_blank">
+                                        <span><i class="fa fa-file-text" aria-hidden="true"></i> Résumé</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../chat">IRC</a></li>
+                    </ul>
+                </div>
                 <div id="mainMenu">
-                    <ul>
-                        <li id="headerListItem"><a href="./"><h1>IRC / Chat</h1></a></li>
+                    <div id="shortMenu">
+                        <a href="../"><h1>Chat</h1></a>
+                        <a id="openMobileMenu" href="#">Menu</a>
+                    </div>
+                    <ul id="wideMenu">
+                        <li id="headerListItem"><a href="./"><h1>Chat</h1></a></li>
                         <li class="mainMenuChatPageONLYListItems"><a href="../">Home</a></li>
                         <li class="mainMenuChatPageONLYListItems">
                             <div class="dropdown">
                                 <span id="menuDropdownTab">Contact</span>
                                 <div class="dropdown-content">
-                                    <a id="hiddenPhoneLink" href="tel:"><p id="hiddenPhone"><i class="fa fa-phone" aria-hidden="true"></i> </p></a>
-                                    <a id="hiddenEmailLink" href="mailto:"><p id="hiddenEmail"><i class="fa fa-envelope" aria-hidden="true"></i> </p></a>
+                                    <a class="hiddenPhoneLink" href="tel:"><p class="hiddenPhone"><i class="fa fa-phone" aria-hidden="true"></i> </p></a>
+                                    <a class="hiddenEmailLink" href="mailto:"><p class="hiddenEmail"><i class="fa fa-envelope" aria-hidden="true"></i> </p></a>
                                 </div>
                             </div>
                         </li>
-                        <li class="mainMenuChatPageONLYListItems"><a href="./"><div id="activePage">IRC</div></a></li>
+                        <li class="mainMenuChatPageONLYListItems"><a href="./">IRC</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
