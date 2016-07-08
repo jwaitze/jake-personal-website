@@ -41,7 +41,7 @@ html, body {
 
 .nonFooterContent {
 	min-height: 100%;
-	margin-bottom: --30px;
+	margin-bottom: -30px;
 }
 
 .nonFooterContent:after {
@@ -207,7 +207,7 @@ html, body {
 
 /* had to single out the tabs to separate selections between the tabs 
 	and the dropdown-content */
-.dropdown:hover #menuDropdownTab {
+.dropdown:hover .menuDropdownTab {
 	color: white;
 }
 
@@ -308,7 +308,64 @@ hr.fadingStyle {
     }
 
     .dropdown-content {
-		min-width: 100px;
+		min-width: 225px;
+		padding: 10px 10px 10px 15px;
+		background-color: black;
+		color: white;
+		margin-top: 10px;
+	}
+
+	.dropdown {
+		color: white;
+	    position: relative;
+	    display: inline;
+	    z-index: 5;
+	}
+
+	.dropdown p {
+		color: white;
+		font-size: 0.8em;
+		padding: 5px;
+	}
+
+	/* same styling as #mainMenu "li a" for now */
+	.dropdown span {
+		display: block;
+		color: black;
+		font-size: 1.3em;
+		font-weight: bold;
+		line-height: 10px
+	}
+
+	#mobileMenuList li a {
+		color: black;
+		font-weight: bold;
+		font-size: 1.3em;
+	}
+
+	#mobileMenuList li {
+		list-style-type: none;
+		height: 75px;
+		width: 20%;
+	}
+
+	#mobileMenuList li a:hover, #mobileMenuList li span:hover {
+		color: gray !important;
+	}
+
+	#mobileMenuList a span {
+		color: white;
+		font-size: 0.8em;
+	}
+
+	#mobileMenuList hr {
+		border-color: white;
+		background-color: white;
+		color: white;
+	}
+
+	#mobileMenuList .dropdown:hover .menuDropdownTab {
+		color: gray;
 	}
 
 	#wideMenu {
@@ -337,6 +394,10 @@ hr.fadingStyle {
 	#shortMenu {
 		display: none;
 	}
+
+	#mobileMenu, #mobileMenuList {
+		display: none !important;
+	}
 }
 
 #shortMenu {
@@ -345,17 +406,18 @@ hr.fadingStyle {
 }
 
 #shortMenu h1 {
-	width: 25%;
+	width: 50%;
 }
 
 #shortMenu a:hover {
-	color: gray;
+	color: white;
 }
 
 #openMobileMenu {
 	float: right;
-	color: white;
-	font-size: 2em;
+	color: gray;
+	font-size: 1.5em;
+	font-weight: bold;
 	line-height: 0;
 }
 
@@ -367,4 +429,23 @@ hr.fadingStyle {
 	height: 100%;
 	right: 5%;
 	z-index: 2;
+}
+
+#closeMobileMenu {
+	float: right;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 3%;
+}
+
+#mobileMenuList ul {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#mobileMenuList li {
+	padding: 3%;
+	margin: 0 auto;
+	font-size: 2em;
 }
