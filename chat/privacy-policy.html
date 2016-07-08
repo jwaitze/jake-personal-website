@@ -7,11 +7,6 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/main.css">
-        <script src="../js/three.min.js"></script>
-        <script src="../js/Projector.js"></script>
-        <script src="../js/CanvasRenderer.js"></script>
-        <script src="../js/Bird.js"></script>
-        <script src="../js/Boid.js"></script>
     </head>
     <body>
         <div class="nonFooterContent">
@@ -24,8 +19,8 @@
                             <div class="dropdown">
                                 <span id="menuDropdownTab">Contact</span>
                                 <div class="dropdown-content">
-                                    <p id="hiddenPhone"><i class="fa fa-phone" aria-hidden="true"></i></p>
-                                    <p id="hiddenEmail"><i class="fa fa-envelope" aria-hidden="true"></i></p>
+                                    <a id="hiddenPhoneLink" href="tel:"><p id="hiddenPhone"><i class="fa fa-phone" aria-hidden="true"></i> </p></a>
+                                    <a id="hiddenEmailLink" href="mailto:"><p id="hiddenEmail"><i class="fa fa-envelope" aria-hidden="true"></i> </p></a>
                                 </div>
                             </div>
                         </li>
@@ -34,9 +29,9 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div id="openBody"><a href="#">(o)</a></div>
+            <div id="openBody"><a href="#">o</a></div>
             <div id="mainBody">
-                <h2 id="inlineElement">Privacy Policy</h2><div id="closeBody"><a href="#">(x)</a></div>
+                <h2 id="inlineElement">Privacy Policy</h2><div id="closeBody"><a href="#">x</a></div>
                 <p>This Privacy Policy governs the manner in which Jake Waitze&#039;s Personal Site collects, uses, maintains and discloses information collected from users (each, a "User") of the http://jake.waitze.net website ("Site").</p>
                 <h3>Personal identification information</h3>
                 <p>We may collect personal identification information from Users in a variety of ways in connection with activities, services, features or resources we make available on our Site. Users may visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.</p>
@@ -109,6 +104,13 @@
         alt="shopify stats"></a></div></noscript>
         <!-- End of StatCounter Code for Default Guide -->
 
+        <script src="../js/three.min.js"></script>
+        <script src="../js/Projector.js"></script>
+        <script src="../js/CanvasRenderer.js"></script>
+        <script src="../js/Bird.js"></script>
+        <script src="../js/Boid.js"></script>
+
+        <script src="../js/addHidden.js"></script>
         <script src="../js/main.js"></script>
     </body>
 </html>

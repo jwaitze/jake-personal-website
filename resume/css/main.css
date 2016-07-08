@@ -39,8 +39,7 @@ td {
   width: 100%;
 }
 
-img {
-    width: 175px;
-    max-width: 200%;
-    height: auto;
+a {
+  text-decoration: underline;
+  color: black;
 }

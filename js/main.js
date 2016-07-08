@@ -1,56 +1,25 @@
 function showMainBody() {
-	var mainBody = document.getElementById('mainBody');
-	if ( mainBody != null ) {
-		mainBody.style.display = 'block';
-	}
-
-	var openBody = document.getElementById('openBody');
-	if ( openBody != null ) {
-		openBody.style.display = 'none';
-	}
+	document.getElementById('mainBody').style.display = 'block';
+	document.getElementById('openBody').style.display = 'none';
 }
 
 function hideMainBody() {
-	var mainBody = document.getElementById('mainBody');
-	if ( mainBody != null ) {
-		mainBody.style.display = 'none';
-	}
-
-	var openBody = document.getElementById('openBody');
-	if ( openBody != null ) {
-		openBody.style.display = 'block';
-	}
+	document.getElementById('mainBody').style.display = 'none';
+	document.getElementById('openBody').style.display = 'block';
 }
 
 function mainContent() {
 
-	// this is for preventing crawlers from taking my information
-	var myPhone = ' '+'8'+'6'+'0'+' '+'5'+'0'+'5'+' '+'9'+'6'+'9'+'4';
-	var myEmail = ' '+'Jake'+String.fromCharCode(64)+'Waitze'+'.net'
-	var phoneElement = document.getElementById('hiddenPhone');
-	var emailElement = document.getElementById('hiddenEmail');
+	addHiddenLinks();
+	addHiddenHTML();
 
-	if ( phoneElement != null ) {
-		phoneElement.innerHTML += myPhone;
-	}
-	
-	if ( emailElement != null ) {
-		emailElement.innerHTML += myEmail;
-	}
+	document.getElementById('closeBody').onclick = function() {
+		hideMainBody();
+	};
 
-	var closeBodyElement = document.getElementById('closeBody');
-	if ( closeBodyElement != null ) {
-		closeBodyElement.onclick = function() {
-			hideMainBody();
-		};
-	}
-
-	var openBodyElement = document.getElementById('openBody');
-	if ( openBodyElement != null ) {
-		openBodyElement.onclick = function() {
-			showMainBody();
-		};
-	}
+	document.getElementById('openBody').onclick = function() {
+		showMainBody();
+	};
 }
 
 var SCREEN_WIDTH = window.innerWidth,

@@ -58,7 +58,7 @@ html, body {
 }
 
 .mainFooter, #mainHeader {
-	background: #C0C0C0;
+	background: #999999;
 	opacity: 0.80;
     filter: alpha(opacity=80); /* For IE8 and earlier */
 }
@@ -152,7 +152,6 @@ html, body {
 #mainBody a, #openBody a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.7);
-	font-size: 90%;
 }
 
 #mainBody a:hover, #openBody a:hover {
@@ -162,16 +161,14 @@ html, body {
 #openBody {
 	padding: 1% 5% 5% 5%; /* more space on all sides but top */
 	margin-right: 10%;
+	margin-top: 2%;
 }
 
 #mainBody {
-	/* rounded bottom */
-	border-bottom-left-radius: 5%;
-	border-bottom-right-radius: 5%;
 	padding: 1% 5% 5% 5%; /* more space on all sides but top */
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-bottom: 5%;
+	margin-bottom: -1%;
 	background-color: rgba(0,0,0,0.80);
 }
 
@@ -181,14 +178,22 @@ html, body {
 #mainBody p, #mainBody li, #mainBody h3 {
     text-indent: 50px;
     line-height: 25px;
-    font-size: 1em;
+    font-size: 1.1em;
 	color: #DCDCDC;
+}
+
+#mainBody {
+	padding-top: 3%;
 }
 
 .dropdown {
 	color: black;
     position: relative;
     display: inline;
+}
+
+.dropdown p {
+	color: black;
 }
 
 /* same styling as #mainMenu "li a" for now */
