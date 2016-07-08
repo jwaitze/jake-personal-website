@@ -41,7 +41,7 @@ html, body {
 
 .nonFooterContent {
 	min-height: 100%;
-	margin-bottom: -25px;
+	margin-bottom: --30px;
 }
 
 .nonFooterContent:after {
@@ -66,7 +66,7 @@ html, body {
 .mainFooter span {
 	float: right;
 	margin-right: 10%;
-	margin-top: 9px;
+	margin-top: 10px;
 }
 
 .mainFooter a {
@@ -301,36 +301,22 @@ hr.fadingStyle {
 }
 
 /* responsive to different device sizes */
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     html {
-    	font-size: 50%;
-    	line-height: 50%;
+    	font-size: 85%;
+    	line-height: 70%;
     }
 
     .dropdown-content {
 		min-width: 100px;
 	}
-}
 
-@media (min-width: 401px) and (max-width: 550px) {
-    html {
-    	font-size: 60%;
-    	line-height: 60%;
-    }
-
-    .dropdown-content {
-		min-width: 120px;
+	#wideMenu {
+		display: none;
 	}
-}
 
-@media (min-width: 551px) and (max-width: 800px) {
-    html {
-    	font-size: 80%;
-    	line-height: 80%;
-    }
-
-    .dropdown-content {
-		min-width: 160px;
+	#shortMenu {
+		display: block !important;
 	}
 }
 
@@ -343,4 +329,42 @@ hr.fadingStyle {
     .dropdown-content {
 		min-width: 200px;
 	}
+
+	#wideMenu {
+		display: block;
+	}
+
+	#shortMenu {
+		display: none;
+	}
+}
+
+#shortMenu {
+	display: none;
+	padding: 3%;
+}
+
+#shortMenu h1 {
+	width: 25%;
+}
+
+#shortMenu a:hover {
+	color: gray;
+}
+
+#openMobileMenu {
+	float: right;
+	color: white;
+	font-size: 2em;
+	line-height: 0;
+}
+
+#mobileMenu {
+	display: none;
+	position: fixed;
+	background-color: white;
+	width: 90%;
+	height: 100%;
+	right: 5%;
+	z-index: 2;
 }

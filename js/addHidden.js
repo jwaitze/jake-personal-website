@@ -11,3 +11,21 @@ function addHiddenHTML() {
 	document.getElementById('hiddenPhone').innerHTML += myPhone;
 	document.getElementById('hiddenEmail').innerHTML += myEmail;
 }
+
+function showMainBody() {
+	document.getElementById('mainBody').style.display = 'block';
+	document.getElementById('openBody').style.display = 'none';
+}
+
+function hideMainBody() {
+	document.getElementById('mainBody').style.display = 'none';
+	document.getElementById('openBody').style.display = 'block';
+}
+
+function showMobileMenu() {
+	document.getElementById('mobileMenu').style.display = 'block';
+}
+
+function hideMobileMenu() {
+	document.getElementById('mobileMenu').style.display = 'none';
+}

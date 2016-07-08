@@ -1,12 +1,4 @@
-function showMainBody() {
-	document.getElementById('mainBody').style.display = 'block';
-	document.getElementById('openBody').style.display = 'none';
-}
-
-function hideMainBody() {
-	document.getElementById('mainBody').style.display = 'none';
-	document.getElementById('openBody').style.display = 'block';
-}
+var mobileMenuHidden = true;
 
 function mainContent() {
 
@@ -19,6 +11,24 @@ function mainContent() {
 
 	document.getElementById('openBody').onclick = function() {
 		showMainBody();
+	};
+
+	document.getElementById('openMobileMenu').onclick = function() {
+		if (mobileMenuHidden) {
+			document.getElementsByTagName('html')[0].style = "overflow:hidden;";
+			mobileMenuHidden = false;
+			showMobileMenu();
+		} else {
+			document.getElementsByTagName('html')[0].style = "overflow:visible;";
+			mobileMenuHidden = true;
+			hideMobileMenu();
+		}
+	};
+
+	document.getElementById('closeMobileMenu').onclick = function() {
+		document.getElementsByTagName('html')[0].style = "overflow:visible;";
+		mobileMenuHidden = true;
+		hideMobileMenu();
 	};
 }
 
