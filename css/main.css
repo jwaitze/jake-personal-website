@@ -460,6 +460,10 @@ hr.fadingStyle {
 	margin-bottom: 25px;
 }
 
+.prevPage {
+	float: left;
+}
+
 .nextPage {
 	float: right;
 }
