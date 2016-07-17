@@ -7,8 +7,8 @@
 	$blog_label = "Blog";
 	$irc_label = "IRC";
 
-	include("../header.php");
-	include("../privacy_policy.php");
-	include("../footer.php");
+	include("../inc/header.php");
+	include("../inc/privacy_policy.php");
+	include("../inc/footer.php");
 
 ?>

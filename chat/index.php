@@ -7,8 +7,8 @@
 	$blog_label = "Blog";
 	$irc_label = "<div id=\"activePage\">IRC</div>";
 
-	include("../header.php");
-	include("../chat.php");
-	include("../footer.php");
+	include("../inc/header.php");
+	include("../inc/chat.php");
+	include("../inc/footer.php");
 
 ?>

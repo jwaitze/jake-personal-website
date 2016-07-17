@@ -449,9 +449,4 @@ hr.fadingStyle {
 }
 
 .blogpost {
-	margin-top: 200px;
-}
-
-.blogpost:first-child {
-	margin-top: 0;
 }
