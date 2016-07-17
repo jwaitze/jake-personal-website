@@ -53,6 +53,10 @@ html, body {
 	font-weight: bold;
 }
 
+.mainFooter span {
+	margin-top: 10px;
+}
+
 .mainFooter, .nonFooterContent:after {
 	height: 30px;
 }
@@ -61,12 +65,6 @@ html, body {
 	background: #999999;
 	opacity: 0.80;
     filter: alpha(opacity=80); /* For IE8 and earlier */
-}
-
-.mainFooter span {
-	float: right;
-	margin-right: 10%;
-	margin-top: 10px;
 }
 
 .mainFooter a {
@@ -485,4 +483,14 @@ hr.fadingStyle {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.logoutFooter {
+	float: left;
+	margin-left: 5%;
+}
+
+.privacyFooter {
+	margin-right: 10%;
+	float: right;
 }

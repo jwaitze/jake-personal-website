@@ -1,14 +1,10 @@
 <?php
 
-	$page_title = "Jake Waitze";
-	$page_description = "";
+	$page_name = basename(__DIR__); // must be in this file
+	// $page_name to output the correct included file in includes.php
 
-	$home_label = "Home";
-	$blog_label = "Blog";
-	$irc_label = "IRC";
+	include("../inc/defaults.php");
 
-	include("../inc/header.php");
-	include("../inc/login.php");
-	include("../inc/footer.php");
+	include("../inc/includes.php");
 
 ?>

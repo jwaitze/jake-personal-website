@@ -1,5 +1,5 @@
 <?php
-	
+
 	if(!isset($page_title)) { // redirect to subdirectory if visited directly
 		header("Location: ../login");
 		exit();
@@ -7,6 +7,15 @@
 
 ?>
                 <h2 id="inlineElement">Login</h2>
+<?php
+
+        if($logged_in) {
+                echo "<p>Logged in.</p>";
+                return;
+        }
+
+?>
+
                 <div class="loginForm">
                 	<form name="login" action="index.php" method="post" accept-charset="utf-8">
                 		<ul>

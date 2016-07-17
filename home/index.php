@@ -1,14 +1,12 @@
 <?php
 
-	$page_title = "Jake Waitze";
+	$page_name = basename(__DIR__); // must be in this file
+	// $page_name to output the correct included file in includes.php
+
+	include("../inc/defaults.php"); // variable values below
 	$page_description = "<meta name=\"description\" content=\"Jake Waitze's personal site. Contact information. Some projects. Social media. IRC. Blog soon.\" />";
-
 	$home_label = "<div id=\"activePage\">Home</div>";
-	$blog_label = "Blog";
-	$irc_label = "IRC";
 
-	include("../inc/header.php");
-	include("../inc/home.php");
-	include("../inc/footer.php");
+	include("../inc/includes.php");
 
 ?>

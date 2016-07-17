@@ -8,7 +8,7 @@
 ?>
 			</div>
 		</div>
-		<div class="mainFooter"><span>2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>
+		<div class="mainFooter"><?php if($logged_in) echo "<span class=\"logoutFooter\">Logged in as: $logged_in_as | <a href=\"?logout\">Logout</a></span>"; ?><span class="privacyFooter">2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>
 
 		<!-- StatCounter -->
 	    <script src="../js/statcounter.js"></script>
