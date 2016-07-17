@@ -267,7 +267,7 @@ hr.fadingStyle {
 }
 
 /* flips the go icon a quarter ways around */
-#goIcon {
+.goIcon {
 	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
@@ -446,4 +446,12 @@ hr.fadingStyle {
 	padding: 3%;
 	margin: 0 10% 0 0;
 	font-size: 2em;
+}
+
+.blogpost {
+	margin-top: 200px;
+}
+
+.blogpost:first-child {
+	margin-top: 0;
 }

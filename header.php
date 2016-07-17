@@ -72,7 +72,7 @@
                                     </a>
                                     <hr class="fadingStyle">
                                     <a href="https://online-go.com/user/view/341057" target="_blank">
-                                        <span><i id="goIcon" class="fa fa-adjust" aria-hidden="true"></i> Go</span>
+                                        <span><i class="goIcon" class="fa fa-adjust" aria-hidden="true"></i> Go</span>
                                     </a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                     </a>
                                     <hr class="fadingStyle">
                                     <a href="https://online-go.com/user/view/341057" target="_blank">
-                                        <span><i id="goIcon" class="fa fa-adjust" aria-hidden="true"></i> Go</span>
+                                        <span><i class="goIcon" class="fa fa-adjust" aria-hidden="true"></i> Go</span>
                                     </a>
                                 </div>
                             </div>

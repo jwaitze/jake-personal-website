@@ -6,7 +6,7 @@
     }
 
 ?>
-                <h2 id="inlineElement">Privacy Policy</h2><div id="closeBody"><a href="#">x</a></div>
+                <h2 id="inlineElement">Privacy Policy</h2>
                 <p>This Privacy Policy governs the manner in which Jake Waitze&#039;s Personal Site collects, uses, maintains and discloses information collected from users (each, a "User") of the http://jake.waitze.net website ("Site").</p>
                 <h3>Personal identification information</h3>
                 <p>We may collect personal identification information from Users in a variety of ways in connection with activities, services, features or resources we make available on our Site. Users may visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.</p>
