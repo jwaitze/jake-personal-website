@@ -1,9 +1,17 @@
+<?php
+    
+    if(!isset($page_title)) { // redirect to home if visited directly
+        header("Location: home");
+        exit();
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><?php echo $page_title ?></title>
+		<title><?php echo $page_title; ?></title>
 		<meta charset="utf-8">
-        <?php echo $page_description ?>
+        <?php echo $page_description; ?>
         <meta name="author" content="Jake Waitze">
 		<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -16,7 +24,7 @@
 				<div id="mobileMenu">
                     <a id="closeMobileMenu" href="#">x</a>
                     <ul id="mobileMenuList">
-                        <li><a href="../home"><?php echo $home_label ?></a></li>
+                        <li><a href="../home"><?php echo $home_label; ?></a></li>
                         <li>
                             <div class="dropdown">
                                 <span class="menuDropdownTab">Contact</span>
@@ -69,18 +77,18 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="../blog"><?php echo $blog_label ?></a></li>
-                        <li><a href="../chat"><?php echo $irc_label ?></a></li>
+                        <li><a href="../blog"><?php echo $blog_label; ?></a></li>
+                        <li><a href="../chat"><?php echo $irc_label; ?></a></li>
                     </ul>
                 </div>
                 <div id="mainMenu">
                     <div id="shortMenu">
-                        <a href="../"><h1><?php echo $page_title ?></h1></a>
+                        <a href="../"><h1><?php echo $page_title; ?></h1></a>
                         <a id="openMobileMenu" href="#">Menu</a>
                     </div>
                     <ul id="wideMenu">
-                        <li><a href="../home"><h1><?php echo $page_title ?></h1></a></li>
-                        <li><a href="../home"><?php echo $home_label ?></a></li>
+                        <li><a href="../home"><h1><?php echo $page_title; ?></h1></a></li>
+                        <li><a href="../home"><?php echo $home_label; ?></a></li>
                         <li>
                             <div class="dropdown">
                                 <span class="menuDropdownTab">Contact</span>
@@ -132,8 +140,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="../blog"><?php echo $blog_label ?></a></li>
-                        <li><a href="../chat"><?php echo $irc_label ?></a></li>
+                        <li><a href="../blog"><?php echo $blog_label; ?></a></li>
+                        <li><a href="../chat"><?php echo $irc_label; ?></a></li>
                     </ul>
                 </div>
 				<div class="clearfix"></div>

@@ -1,3 +1,11 @@
+<?php
+	
+	if(!isset($page_title)) { // redirect to home if visited directly
+		header("Location: home");
+		exit();
+	}
+
+?>
 			</div>
 		</div>
 		<div class="mainFooter"><span>2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>

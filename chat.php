@@ -1,6 +1,6 @@
- <?php
+<?php
 	
-	if(!isset($page_title)) {
+	if(!isset($page_title)) { // redirect to subdirectory if visited directly
 		header("Location: chat");
 		exit();
 	}

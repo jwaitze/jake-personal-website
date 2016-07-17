@@ -1,3 +1,3 @@
 <?php
-	header("Location: home");
+	header("Location: home"); // redirect to home if visited directly
 ?>
