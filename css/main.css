@@ -448,5 +448,18 @@ hr.fadingStyle {
 	font-size: 2em;
 }
 
-.blogpost {
+/* add a margin to the top if it's not the first blog post */
+/* don't add a margin if it's the second blogpost child */
+/* the first one is the close x for the main body */
+.blogpost:not(:nth-child(2)) {
+	margin-top: 25px;
+}
+
+/* add a margin at the bottom if it's not the last blog post */
+.blogpost:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.nextPage {
+	float: right;
 }
