@@ -1,7 +1,7 @@
 <?php
 	
 	if(!isset($page_title)) { // redirect to subdir if visited directly
-		header("Location: blog");
+		header("Location: ../blog");
 		exit();
 	}
 
@@ -21,7 +21,11 @@
 		return; // exit just this included file
 	}
 
-	$files = array_diff(scandir($path), array('.', '..')); // omit this dir & prev dir
+	// pagination...
+
+	$files = scandir($path); // get file list
+	$files = array_diff($files, array('.', '..')); // omit this dir & prev dir
+	$files = array_reverse($files); // reverse it so naming goes old to new
 	$total_posts_count = count($files);
 
 	$page_num = 0;
@@ -43,7 +47,7 @@
 			echo "<hr>";
 	}
 
-	// pagination...
+	// next page / prev page
 	if(!isset($_GET['page']))
 		echo "<a href=\"?page=1\"><div class=\"nextPage\">>>> Next Page >>></div></a>";
 	else {

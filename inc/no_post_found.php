@@ -1,7 +1,7 @@
 <?php
 	
 	if(!isset($page_title)) { // redirect to subdirectory if visited directly
-		header("Location: blog");
+		header("Location: ../blog");
 		exit();
 	}
 

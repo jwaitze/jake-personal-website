@@ -1,7 +1,7 @@
 <?php
     
     if(!isset($page_title)) { // redirect to home if visited directly
-        header("Location: home");
+        header("Location: ../home");
         exit();
     }
 
