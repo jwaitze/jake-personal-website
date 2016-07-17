@@ -6,6 +6,7 @@
 
 	$logged_in = false;
 	$logged_in_as = "";
+	$notice_to_display ="";
 
 	$page_title = "Jake Waitze";
 	$page_description = "";

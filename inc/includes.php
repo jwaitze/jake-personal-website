@@ -4,13 +4,17 @@
 	if(isset($generate_password_hash))
 		die(hash('sha512', $generate_password_hash . $generate_password_hash . "`^salt^`"));
 
-	require("../inc/database.php");
-	require("../inc/check_login.php");
+	include_once("../inc/database.php");
+	include_once("../inc/check_login.php");
 	$mysqli->close();
 
+
+	include_once("../inc/process_submits.php");
+
 	//output the full page
-	require("../inc/header.php");
-	require($page_name . ".php");
-	require("../inc/footer.php");
+	include_once("../inc/header.php");
+
+	include_once($page_name . ".php");
+	include_once("../inc/footer.php");
 
 ?>

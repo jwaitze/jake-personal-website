@@ -32,6 +32,7 @@ h1:hover {
 /* remove the default underline */
 a {
 	text-decoration: none;
+	color: rgba(255,255,255,0.7);
 }
 
 /* next five rules apply to the footer */
@@ -55,6 +56,7 @@ html, body {
 
 .mainFooter span {
 	margin-top: 10px;
+	color: black;
 }
 
 .mainFooter, .nonFooterContent:after {
@@ -144,7 +146,7 @@ html, body {
 	padding: 3% 6% 3% 3%;
 }
 
-#mainBody a, #openBody a {
+#openBody a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.7);
 }
@@ -479,7 +481,7 @@ hr.fadingStyle {
 	color: black;
 }*/
 
-.loginForm ul, .loginForm li {
+.loginForm li, .newBlogPostContainer li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -493,4 +495,36 @@ hr.fadingStyle {
 .privacyFooter {
 	margin-right: 10%;
 	float: right;
+}
+
+.newBlogPost {
+	text-decoration: underline;
+}
+
+.newBlogPostContainer textarea {
+	height: 50vh;
+	width: 100%;
+}
+
+.newBlogPostContainer textarea {
+	height: 50vh;
+	width: 100%;
+}
+
+.newBlogPostContainer .submitButton {
+	float: right;
+	margin-right: 10%;
+}
+
+.newBlogPostContainer input {
+	width: 75%;
+}
+
+.newBlogPostContainer a {
+	text-decoration: underline;
+	color: rgba(255,255,255,0.7);
+}
+
+.newBlogPostContainer input, .newBlogPostContainer textarea {
+	color: black;
 }

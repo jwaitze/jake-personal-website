@@ -1,6 +1,6 @@
 <?php
 
-	if(!isset($page_title)) { // redirect to subdirectory if visited directly
+        if(!isset($page_title)) { // redirect to subdirectory if visited directly
 		header("Location: ../login");
 		exit();
 	}
@@ -11,13 +11,16 @@
 
         if($logged_in) {
                 echo "<p>Logged in.</p>";
+                echo "<ul>";
+                echo "<li class=\"newBlogPost\"><a href=\"../blogpost\">Make a new blog post</a></li>";
+                echo "</ul>";
                 return;
         }
 
 ?>
 
                 <div class="loginForm">
-                	<form name="login" action="index.php" method="post" accept-charset="utf-8">
+                        <form name="login" action="index.php" method="post" accept-charset="utf-8">
                 		<ul>
                 			<li>
                 				<label for="username">Username:</label>

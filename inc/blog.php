@@ -39,8 +39,11 @@
 	// extract the slice of posts we want
 	$files = array_slice($files, $page_num * $posts_per_page, $posts_per_page);
 
+	if(count($files) == 0)
+		echo "<p>Nothing to see here... Come back later.";
+
 	foreach($files as $file) {
-		$page_filepath = "?post=" . basename($file, ".php");
+		$page_filepath = "?post=" . basename(urlencode($file), ".php"); // urlencode for inline link usage
 		include($path . '/' . $file);
 
 		if($file != end($files)) // add the line if it's not the last entry
@@ -48,7 +51,7 @@
 	}
 
 	// next page / prev page
-	if(!isset($_GET['page']))
+	if(!isset($_GET['page']) && $total_posts_count > $posts_per_page)
 		echo "<a href=\"?page=1\"><div class=\"nextPage\">>>> Next Page >>></div></a>";
 	else {
 		if($page_num != 0) {
@@ -57,7 +60,7 @@
 			echo "\"><div class=\"prevPage\"><<< Previous Page <<<</div></a>";
 		}
 
-		if(($page_num + 1) * $posts_per_page < $total_posts_count) {
+		if(($page_num + 1) * $posts_per_page < $total_posts_count && $total_posts_count > $posts_per_page) {
 			echo "<a href=\"?page=";
 			echo $page_num + 1;
 			echo "\"><div class=\"nextPage\">>>> Next Page >>></div></a>";
