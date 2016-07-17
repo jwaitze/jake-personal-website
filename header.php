@@ -138,3 +138,6 @@
                 </div>
 				<div class="clearfix"></div>
 			</div>
+            <div id="openBody"><a href="#">o</a></div>
+            <div id="mainBody">
+                <div id="closeBody"><a href="#">x</a></div>

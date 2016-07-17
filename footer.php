@@ -1,3 +1,4 @@
+			</div>
 		</div>
 		<div class="mainFooter"><span>2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>
 
