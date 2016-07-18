@@ -114,8 +114,11 @@ html, body {
 	display: block;
 	color: gray;
 	font-size: 1.1em;
-	font-weight: bold;
 	line-height: 10px;
+}
+
+.menuTop {
+	font-weight: bold;
 }
 
 #mainMenu li {
