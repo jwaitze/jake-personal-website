@@ -1,6 +1,6 @@
 <?php
 
-        if(!isset($page_title)) { // redirect to subdirectory if visited directly
+        if(!isset($page_name)) { // redirect to subdirectory if visited directly
                 header("Location: ../login");
                 exit();
         }

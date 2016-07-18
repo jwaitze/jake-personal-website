@@ -1,6 +1,6 @@
 <?php
 
-	if(!isset($page_title)) { // redirect to subdir if visited directly
+	if(!isset($page_name)) { // redirect to home if visited directly
 		header("Location: ../home");
 		exit();
 	}
