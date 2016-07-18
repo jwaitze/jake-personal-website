@@ -10,13 +10,19 @@
 		$query_start = $mysqli->real_escape_string($start);
 		$query_amount = $mysqli->real_escape_string($amount);
 
+		$stmt = $mysqli->prepare("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT ?, ?");
+		$stmt->bind_param('ss', $query_start, $query_amount);
+		$stmt->execute();
+
 		$retval = array();
-		if($result = $mysqli->query("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT $query_start, $query_amount")) {
+		if($result = $stmt->get_result()) {
 			while($row = mysqli_fetch_array($result))
 				array_push($retval, $row['content']);
 
 			$result->close();
 		}
+
+		$stmt->close();
 
 		return $retval;
 	}
@@ -42,16 +48,23 @@
 
 		$query_urlkey = $mysqli->real_escape_string($urlkey);
 
-		if($result = $mysqli->query("SELECT content FROM blogposts WHERE urlkey = '$query_urlkey' LIMIT 1")) {
+		$stmt = $mysqli->prepare("SELECT content FROM blogposts WHERE urlkey = ? LIMIT 1");
+		$stmt->bind_param('s', $query_urlkey);
+		$stmt->execute();
+
+		if($result = $stmt->get_result()) {
 			while($row = mysqli_fetch_array($result)) {
 				if($row['content']) {
 					$result->close();
+					$stmt->close();
 					return $row['content'];
 				}
 			}
 
 			$result->close();
 		}
+
+		$stmt->close();
 
 		return "";
 	}

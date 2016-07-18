@@ -4,12 +4,19 @@
 
 		$query_username = $mysqli->real_escape_string($username);
 
-		if($result = $mysqli->query("SELECT password FROM users WHERE username = '" . trim($query_username) . "' LIMIT 1;")) {
+		$stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ? LIMIT 1");
+		$stmt->bind_param('s', trim($query_username));
+		$stmt->execute();
+
+		if($result = $stmt->get_result()) {
 			$row = mysqli_fetch_array($result);
 			$retval = $row['password'];
 			$result->close();
+			$stmt->close();
 			return $retval;
 		}
+
+		$stmt->close();
 
 		session_unset();
 		return "";
