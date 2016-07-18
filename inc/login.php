@@ -1,9 +1,9 @@
 <?php
 
         if(!isset($page_title)) { // redirect to subdirectory if visited directly
-		header("Location: ../login");
-		exit();
-	}
+                header("Location: ../login");
+                exit();
+        }
 
 ?>
                 <h2 id="inlineElement">Login</h2>

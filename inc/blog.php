@@ -5,16 +5,58 @@
 		exit();
 	}
 
+	function GetStoredPostsByRange($mysqli, $start, $amount) {
+		$retval = array();
+		if($result = $mysqli->query("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT $start, $amount")) {
+			while($row = mysqli_fetch_array($result))
+				array_push($retval, $row['content']);
+
+			$result->close();
+		}
+
+		return $retval;
+	}
+
+	function GetStoredPostsCount($mysqli) {
+		if($result = $mysqli->query("SELECT COUNT(*) FROM blogposts")) {
+			while($row = mysqli_fetch_array($result)) {
+				foreach($row as $value) {
+					if($value) {
+						$result->close();
+						return $value;
+					}
+				}
+			}
+
+			$result->close();
+		}
+
+		return 0;
+	}
+
+	function GetPostByURLKey($mysqli, $urlkey) {
+		if($result = $mysqli->query("SELECT content FROM blogposts WHERE urlkey = '$urlkey' LIMIT 1")) {
+			while($row = mysqli_fetch_array($result)) {
+				if($row['content']) {
+					$result->close();
+					return $row['content'];
+				}
+			}
+
+			$result->close();
+		}
+
+		return "";
+	}
+
 	$path = "posts";
 
 	if(isset($_GET['post'])) { // direct link to post
-		$filepath = $path . '/' . urldecode($_GET['post']) . '.php';
-		if(!file_exists($filepath))
+		$post = GetPostByURLKey($mysqli, urldecode($_GET['post']));
+		if($post == "")
 			include("../inc/no_post_found.php");
-		else {
-			$page_filepath = "";
-			include($filepath);
-		}
+		else
+			echo $post;
 
 		echo "<a href=\"../blog\"><<< Go to Blog <<<</a>";
 
@@ -22,11 +64,6 @@
 	}
 
 	// pagination...
-
-	$files = scandir($path); // get file list
-	$files = array_diff($files, array('.', '..')); // omit this dir & prev dir
-	$files = array_reverse($files); // reverse it so naming goes old to new
-	$total_posts_count = count($files);
 
 	$page_num = 0;
 	if(isset($_GET['page']))
@@ -36,17 +73,15 @@
 	if(isset($_GET['posts_per']))
 		$posts_per_page = (int)$_GET['posts_per'];
 
-	// extract the slice of posts we want
-	$files = array_slice($files, $page_num * $posts_per_page, $posts_per_page);
+	$posts = GetStoredPostsByRange($mysqli, $page_num * $posts_per_page, $posts_per_page);
+	$total_posts_count = GetStoredPostsCount($mysqli);
 
-	if(count($files) == 0)
+	if(count($posts) == 0)
 		echo "<p>Nothing to see here... Come back later.";
 
-	foreach($files as $file) {
-		$page_filepath = "?post=" . basename(urlencode($file), ".php"); // urlencode for inline link usage
-		include($path . '/' . $file);
-
-		if($file != end($files)) // add the line if it's not the last entry
+	foreach($posts as $post) {
+		echo $post;
+		if($post != end($posts)) // add the line if it's not the last entry
 			echo "<hr>";
 	}
 

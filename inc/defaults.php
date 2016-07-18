@@ -1,8 +1,8 @@
 <?php
 
-	include("../config.php");
+	include("../_config.php");
 
-	error_reporting(E_ERROR | E_PARSE);
+	error_reporting(E_ERROR | E_PARSE); // disable for development
 
 	$logged_in = false;
 	$logged_in_as = "";

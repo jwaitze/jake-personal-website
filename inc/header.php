@@ -8,20 +8,20 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title><?php echo $page_title; ?></title>
-		<meta charset="utf-8">
+    <head>
+        <title><?php echo $page_title; ?></title>
+        <meta charset="utf-8">
         <?php echo $page_description; ?>
         <meta name="author" content="Jake Waitze">
-		<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../css/main.css">
-	</head>
-	<body>
-		<div class="nonFooterContent">
-			<div id="mainHeader">
-				<div id="mobileMenu">
+        <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="nonFooterContent">
+            <div id="mainHeader">
+                <div id="mobileMenu">
                     <a id="closeMobileMenu" href="#">x</a>
                     <ul id="mobileMenuList">
                         <li><a href="../home" class="menuTop"><?php echo $home_label; ?></a></li>

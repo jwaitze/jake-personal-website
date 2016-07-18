@@ -1,7 +1,6 @@
 <?php
 
-	function GetStoredPassword($username) {
-		global $mysqli;
+	function GetStoredPassword($mysqli, $username) {
 		if($result = $mysqli->query("SELECT password FROM users WHERE username = '" . trim($username) . "' LIMIT 1;")) {
 			$row = mysqli_fetch_array($result);
 			$retval = $row['password'];
@@ -24,7 +23,7 @@
 
 	if($_SESSION['username'] && $_SESSION['password']) {
 		// check current session
-		$stored_password = GetStoredPassword($_SESSION['username']);
+		$stored_password = GetStoredPassword($mysqli, $_SESSION['username']);
 		if($stored_password == "")
 			return;
 
@@ -38,7 +37,7 @@
 
 	} else if($_POST['username'] && $_POST['password']) {
 		// process new login
-		$stored_password = GetStoredPassword($_POST['username']);
+		$stored_password = GetStoredPassword($mysqli, $_POST['username']);
 		if($stored_password == "") // no such user
 			return;
 		
