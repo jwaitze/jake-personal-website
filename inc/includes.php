@@ -1,5 +1,7 @@
 <?php
 
+	// redirect will be checked in any of the next included files, so it doesn't need to be in here...
+
 	//$generate_password_hash = "";
 	if(isset($generate_password_hash))
 		die(hash('sha512', $generate_password_hash . $generate_password_hash . "`^salt^`"));

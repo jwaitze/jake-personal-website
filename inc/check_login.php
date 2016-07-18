@@ -1,5 +1,10 @@
 <?php
 
+	if(!isset($page_title)) { // redirect to subdir if visited directly
+		header("Location: ../home");
+		exit();
+	}
+
 	function GetStoredPassword($mysqli, $username) {
 
 		$stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ? LIMIT 1");

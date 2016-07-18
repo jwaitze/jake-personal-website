@@ -1,5 +1,10 @@
 <?php
 
+	if(!isset($page_title)) { // redirect to subdir if visited directly
+		header("Location: ../home");
+		exit();
+	}
+
 	include("../_config.php");
 
 	error_reporting(E_ERROR | E_PARSE); // disable for development

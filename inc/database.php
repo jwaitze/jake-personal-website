@@ -1,4 +1,9 @@
 <?php
+
+	if(!isset($page_title)) { // redirect to subdir if visited directly
+		header("Location: ../home");
+		exit();
+	}
 	
 	$mysqli = new mysqli($SQLDB['host'], $SQLDB['user'], $SQLDB['pass'], $SQLDB['db']);
 	if($mysqli->connect_errno)
