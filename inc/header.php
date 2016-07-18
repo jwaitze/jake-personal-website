@@ -24,7 +24,7 @@
 				<div id="mobileMenu">
                     <a id="closeMobileMenu" href="#">x</a>
                     <ul id="mobileMenuList">
-                        <li><a href="../home"><?php echo $home_label; ?></a></li>
+                        <li><a href="../home" class="menuTop"><?php echo $home_label; ?></a></li>
                         <li>
                             <div class="dropdown">
                                 <span class="menuDropdownTab">Contact</span>
@@ -77,8 +77,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="../blog"><?php echo $blog_label; ?></a></li>
-                        <li><a href="../chat"><?php echo $irc_label; ?></a></li>
+                        <li><a href="../blog" class="menuTop"><?php echo $blog_label; ?></a></li>
+                        <li><a href="../chat" class="menuTop"><?php echo $irc_label; ?></a></li>
                     </ul>
                 </div>
                 <div id="mainMenu">
@@ -88,7 +88,7 @@
                     </div>
                     <ul id="wideMenu">
                         <li><a href="../home"><h1><?php echo $page_title; ?></h1></a></li>
-                        <li><a href="../home"><?php echo $home_label; ?></a></li>
+                        <li><a href="../home" class="menuTop"><?php echo $home_label; ?></a></li>
                         <li>
                             <div class="dropdown">
                                 <span class="menuDropdownTab">Contact</span>
@@ -140,8 +140,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="../blog"><?php echo $blog_label; ?></a></li>
-                        <li><a href="../chat"><?php echo $irc_label; ?></a></li>
+                        <li><a href="../blog" class="menuTop"><?php echo $blog_label; ?></a></li>
+                        <li><a href="../chat" class="menuTop"><?php echo $irc_label; ?></a></li>
                     </ul>
                 </div>
 				<div class="clearfix"></div>
