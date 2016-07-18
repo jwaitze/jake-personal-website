@@ -2,10 +2,8 @@
 
 	function GetStoredPassword($mysqli, $username) {
 
-		$query_username = $mysqli->real_escape_string($username);
-
 		$stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ? LIMIT 1");
-		$stmt->bind_param('s', trim($query_username));
+		$stmt->bind_param('s', trim($username));
 		$stmt->execute();
 
 		if($result = $stmt->get_result()) {

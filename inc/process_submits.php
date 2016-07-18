@@ -9,12 +9,8 @@
                 if(!$logged_in)
                         return false;
 
-                $query_title = $mysqli->real_escape_string($title);
-                $query_urlkey = $mysqli->real_escape_string($urlkey);
-                $query_content = $mysqli->real_escape_string($content);
-
                 $stmt = $mysqli->prepare("INSERT INTO `blogposts` (`title`, `urlkey`, `content`) VALUES (?, ?, ?)");
-                $stmt->bind_param('sss', $query_title, $query_urlkey, $query_content);
+                $stmt->bind_param('sss', $title, $urlkey, $content);
                 $stmt->execute();
 
                 if($stmt->affected_rows > 0)
