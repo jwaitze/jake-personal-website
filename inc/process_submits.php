@@ -10,11 +10,11 @@
                         return false;
 
                 // don't break my SQL statements! (perhaps used prepared statements later...)
-                $insert_title = $mysqli->real_escape_string($title);
-                $insert_urlkey = $mysqli->real_escape_string($urlkey);
-                $insert_content = $mysqli->real_escape_string($content);
+                $query_title = $mysqli->real_escape_string($title);
+                $query_urlkey = $mysqli->real_escape_string($urlkey);
+                $query_content = $mysqli->real_escape_string($content);
 
-                if($mysqli->query("INSERT INTO `blogposts` (`title`, `urlkey`, `content`) VALUES ('$insert_title', '$insert_urlkey', '$insert_content')") == TRUE)
+                if($mysqli->query("INSERT INTO `blogposts` (`title`, `urlkey`, `content`) VALUES ('$query_title', '$query_urlkey', '$query_content')") == TRUE)
                         return true;
                 
                 return false;

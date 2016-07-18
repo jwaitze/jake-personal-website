@@ -1,7 +1,10 @@
 <?php
 
 	function GetStoredPassword($mysqli, $username) {
-		if($result = $mysqli->query("SELECT password FROM users WHERE username = '" . trim($username) . "' LIMIT 1;")) {
+
+		$query_username = $mysqli->real_escape_string($username);
+
+		if($result = $mysqli->query("SELECT password FROM users WHERE username = '" . trim($query_username) . "' LIMIT 1;")) {
 			$row = mysqli_fetch_array($result);
 			$retval = $row['password'];
 			$result->close();

@@ -6,8 +6,12 @@
 	}
 
 	function GetStoredPostsByRange($mysqli, $start, $amount) {
+
+		$query_start = $mysqli->real_escape_string($start);
+		$query_amount = $mysqli->real_escape_string($amount);
+
 		$retval = array();
-		if($result = $mysqli->query("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT $start, $amount")) {
+		if($result = $mysqli->query("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT $query_start, $query_amount")) {
 			while($row = mysqli_fetch_array($result))
 				array_push($retval, $row['content']);
 
@@ -35,7 +39,10 @@
 	}
 
 	function GetPostByURLKey($mysqli, $urlkey) {
-		if($result = $mysqli->query("SELECT content FROM blogposts WHERE urlkey = '$urlkey' LIMIT 1")) {
+
+		$query_urlkey = $mysqli->real_escape_string($urlkey);
+
+		if($result = $mysqli->query("SELECT content FROM blogposts WHERE urlkey = '$query_urlkey' LIMIT 1")) {
 			while($row = mysqli_fetch_array($result)) {
 				if($row['content']) {
 					$result->close();
