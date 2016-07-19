@@ -1,13 +1,13 @@
 <?php
 
 	if(!isset($page_name)) { // redirect to subdirectory if visited directly
-		header("Location: ../blogpost");
+		header("Location: ../blog");
 		exit();
 	}
 
 	// exclusive to logged in users
 	if(!$logged_in)
-                return;
+		return;
 
 ?>
 				<h2 id="inlineElement">New Blog Post</h2>
@@ -21,7 +21,7 @@
                 		<ul>
                 			<li>
                 				<label for="blogtitle">Blog Title:</label>
-                				<input type="blogtitle" name="blogtitle" placeholder="Title" required />
+                				<input type="blogtitle" name="blogtitle" placeholder="Title" required>
                 			</li>
                 			<li>
                 				<label for="blogcontent">Blog Post:</label>

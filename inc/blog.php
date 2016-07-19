@@ -5,65 +5,6 @@
 		exit();
 	}
 
-	function GetStoredPostsByRange($mysqli, $start, $amount) {
-
-		$stmt = $mysqli->prepare("SELECT content FROM blogposts ORDER BY urlkey DESC LIMIT ?, ?");
-		$stmt->bind_param('ii', $start, $amount);
-		$stmt->execute();
-
-		$retval = array();
-		if($result = $stmt->get_result()) {
-			while($row = mysqli_fetch_array($result))
-				array_push($retval, $row['content']);
-
-			$result->close();
-		}
-
-		$stmt->close();
-
-		return $retval;
-	}
-
-	function GetStoredPostsCount($mysqli) {
-		if($result = $mysqli->query("SELECT COUNT(*) FROM blogposts")) {
-			while($row = mysqli_fetch_array($result)) {
-				foreach($row as $value) {
-					if($value) {
-						$result->close();
-						return $value;
-					}
-				}
-			}
-
-			$result->close();
-		}
-
-		return 0;
-	}
-
-	function GetPostByURLKey($mysqli, $urlkey) {
-
-		$stmt = $mysqli->prepare("SELECT content FROM blogposts WHERE urlkey = ? LIMIT 1");
-		$stmt->bind_param('s', $urlkey);
-		$stmt->execute();
-
-		if($result = $stmt->get_result()) {
-			while($row = mysqli_fetch_array($result)) {
-				if($row['content']) {
-					$result->close();
-					$stmt->close();
-					return $row['content'];
-				}
-			}
-
-			$result->close();
-		}
-
-		$stmt->close();
-
-		return "";
-	}
-
 	$path = "posts";
 
 	if(isset($_GET['post'])) { // direct link to post

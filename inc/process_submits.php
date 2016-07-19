@@ -5,27 +5,14 @@
                 exit();
         }
 
-        function InsertBlogPostIntoDatabase($logged_in, $mysqli, $title, $urlkey, $content) {
-                if(!$logged_in)
-                        return false;
-
-                $stmt = $mysqli->prepare("INSERT INTO `blogposts` (`title`, `urlkey`, `content`) VALUES (?, ?, ?)");
-                $stmt->bind_param('sss', $title, $urlkey, $content);
-                $stmt->execute();
-
-                if($stmt->affected_rows > 0)
-                        return true;
-
-                $stmt->close();
-                
-                return false;
-        }
-
         date_default_timezone_set('EST');
 
         // submits which are exclusive to logged in users
         if($logged_in) {
-                if(isset($_POST['blogtitle']) && isset($_POST['blogcontent'])) { // NEW POST SUBMISSION
+                if(isset($_GET['blogedit']) && isset($_POST['blogpostkey'])) {
+                        echo GetBlogPostByUrlKeyFromDatabase($mysqli, "2016-07-18_Hello,-World.-My-First-Personal-Website-Blog-Post");
+                        die("test");
+                } else if(isset($_POST['blogtitle']) && isset($_POST['blogcontent'])) { // NEW POST SUBMISSION
                         $new_title_core = date("Y-m-d_") . str_replace(' ', '-', $_POST['blogtitle']);
                         $url_filepath = "../blog/index.php?post=" . basename(urlencode($new_title_core)); // urlencode for inline link usage
                         $new_title = '../blog/posts/' . $new_title_core . '.php';

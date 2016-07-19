@@ -5,26 +5,6 @@
 		exit();
 	}
 
-	function GetStoredPassword($mysqli, $username) {
-
-		$stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ? LIMIT 1");
-		$stmt->bind_param('s', trim($username));
-		$stmt->execute();
-
-		if($result = $stmt->get_result()) {
-			$row = mysqli_fetch_array($result);
-			$retval = $row['password'];
-			$result->close();
-			$stmt->close();
-			return $retval;
-		}
-
-		$stmt->close();
-
-		session_unset();
-		return "";
-	}
-
 	session_start();
 
 	if(isset($_GET['logout'])) {
@@ -34,7 +14,7 @@
 		return;
 	}
 
-	if($_SESSION['username'] && $_SESSION['password']) {
+	if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
 		// check current session
 		$stored_password = GetStoredPassword($mysqli, $_SESSION['username']);
 		if($stored_password == "")
@@ -48,7 +28,7 @@
 		
 		session_unset();
 
-	} else if($_POST['username'] && $_POST['password']) {
+	} else if(isset($_POST['username']) && isset($_POST['password'])) {
 		// process new login
 		$stored_password = GetStoredPassword($mysqli, $_POST['username']);
 		if($stored_password == "") // no such user
