@@ -12,7 +12,7 @@
         if($logged_in) {
                 echo "<p>Logged in.</p>";
                 echo "<ul>";
-                echo "<li class=\"newBlogPost\"><a href=\"../blogpost\">Make a new blog post</a></li>";
+                echo '<li class="newBlogPost"><a href="../blogpost">Make a new blog post</a></li>';
                 echo "</ul>";
                 return;
         }

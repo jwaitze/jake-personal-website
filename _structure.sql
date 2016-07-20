@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `blogposts` (
+  `author` varchar(244) NOT NULL,
   `title` varchar(244) NOT NULL,
   `urlkey` varchar(255) NOT NULL,
   `content` TEXT NOT NULL,

@@ -4,7 +4,7 @@
 	// $page_name to output the correct included file in includes.php
 
 	include("../inc/defaults.php"); // variable values below
-	$page_description = "<meta name=\"description\" content=\"Jake Waitze's personal site. | Privacy Policy\" />";
+	$page_description = '<meta name="description" content="Jake Waitze\'s personal site. | Privacy Policy" />';
 
 	include("../inc/includes.php");
 

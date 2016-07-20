@@ -12,9 +12,9 @@
 <?php
 
 	if($logged_in)
-		echo "<span class=\"loginFooter\">Logged in as: $logged_in_as | <a href=\"?logout\">Logout</a></span>";
+		echo '<span class="loginFooter"><a href="../login">Account</a> | Logged in as: ' . $logged_in_as . ' | <a href="?logout">Logout</a></span>';
 	else
-		echo "<span class=\"loginFooter\"><a href=\"../login\">Login</a></span>";
+		echo '<span class="loginFooter"><a href="../login">Login</a></span>';
 
 ?>
 		<span class="privacyFooter">2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>

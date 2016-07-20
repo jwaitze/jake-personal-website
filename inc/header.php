@@ -36,6 +36,10 @@
                                     <a href="../resume" target="_blank">
                                         <span><i class="fa fa-file-text" aria-hidden="true"></i> Résumé</span>
                                     </a>
+                                    <hr class="fadingStyle">
+                                    <a href="../pgp.txt" target="_blank">
+                                        <span><i class="fa fa-copy" aria-hidden="true"></i> PGP</span>
+                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -98,6 +102,10 @@
                                     <hr class="fadingStyle">
                                     <a href="../resume" target="_blank">
                                         <span><i class="fa fa-file-text" aria-hidden="true"></i> Résumé</span>
+                                    </a>
+                                    <hr class="fadingStyle">
+                                    <a href="../pgp.txt" target="_blank">
+                                        <span><i class="fa fa-copy" aria-hidden="true"></i> PGP</span>
                                     </a>
                                 </div>
                             </div>

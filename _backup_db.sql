@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Jul 18, 2016 at 12:05 AM
--- Server version: 5.6.26
--- PHP Version: 5.6.14
+-- Host: 127.0.0.1
+-- Generation Time: Jul 20, 2016 at 08:06 AM
+-- Server version: 5.7.11
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `admin_personalsite`
+-- Database: `personalsite`
 --
 
 -- --------------------------------------------------------
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `blogposts` (
+  `author` varchar(244) NOT NULL,
   `title` varchar(244) NOT NULL,
   `urlkey` varchar(255) NOT NULL,
   `content` text NOT NULL
@@ -36,8 +37,11 @@ CREATE TABLE `blogposts` (
 -- Dumping data for table `blogposts`
 --
 
-INSERT INTO `blogposts` (`title`, `urlkey`, `content`) VALUES
-('Hello, World. My First Personal-Website Blog Post', '2016-07-18_Hello,-World.-My-First-Personal-Website-Blog-Post', '        <div class="blogpost">\r\n                <a href="../blog/index.php?post=2016-07-18_Hello%2C-World.-My-First-Personal-Website-Blog-Post"><h2 id="inlineElement">Hello, World. My First Personal-Website Blog Post</h2></a>\r\n                <p>Posted: 2016-07-18</p>\r\n<p>Hi,</p>\r\n<p>This is my first live post on the blog I am hosting on my personal website. I think I will normally have technical kinds of posts on this site. In my first few posts on this site, I\'ll probably walk through the things I have publicly available before moving on to other stuff.</p>\r\n<p>I\'m going to try and make quality content and update this blog with stuff regularly. An archive section will be implemented for it soon, maybe a search and tags, too, so it will be easy to navigate in the future when there are more posts.</p>\r\n<p>My next write will go in depth about the building of this website. I will be keeping this website open source. (<a href="https://github.com/jwaitze/Personal-Website" target="_blank">GitHub.com/jwaitze/Personal-Website</a>)</p>\r\n<p>See you in the next one hopefully with more in it,</p>\r\n<p>Jake</p>\r\n        </div>\r\n');
+INSERT INTO `blogposts` (`author`, `title`, `urlkey`, `content`) VALUES
+('jake', '1 2 3 Test Post One', '2016-07-20_1-2-3-Test-Post-One', '<p>This is a test.</p>\r\n<p><a href="#">testing one two three</a></p>'),
+('jake', 'a b c Testing testing...', '2016-07-20_a-b-c-Testing-testing...', '<p>Just making a few posts for the pagination to take effect. Blah blah lorem ipsum.'),
+('jake', 'Alpha Beta Gamma', '2016-07-20_Alpha-Beta-Gamma', '<p>alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu nu xi omicron pi rho sigma tau upsilon phi chi psi omega</p>'),
+('jake', 'Hello, World. My First Blog Post', '2016-07-20_Hello,-World.-My-First-Blog-Post', '<p>Hi,</p>\r\n<p>This is my first live post on the blog I am hosting on my personal website. I think I will normally have technical kinds of posts on this site. In my first few posts on this site, I\'ll probably walk through the things I have publicly available before moving on to other stuff.</p>\r\n<p>I\'m going to try and make quality content and update this blog with stuff regularly. An archive section will be implemented for it soon, maybe a search and tags, too, so it will be easy to navigate in the future when there are more posts.</p>\r\n<p>My next write will go in depth about the building of this website. I will be keeping this website open source. (<a href="https://github.com/jwaitze/Personal-Website" target="_blank">GitHub.com/jwaitze/Personal-Website</a>)</p>\r\n<p>See you in the next one hopefully with more in it,</p>\r\n<p>Jake</p>\r\n');
 
 -- --------------------------------------------------------
 

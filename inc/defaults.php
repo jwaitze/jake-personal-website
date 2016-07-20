@@ -20,4 +20,9 @@
 	$blog_label = "Blog";
 	$irc_label = "IRC";
 
+	$temp1 = 0;
+	$temp2 = 0;
+	$temp3 = 0;
+	$temp4 = 0;
+
 ?>

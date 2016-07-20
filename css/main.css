@@ -509,11 +509,6 @@ hr.fadingStyle {
 	width: 100%;
 }
 
-.newBlogPostContainer textarea {
-	height: 50vh;
-	width: 100%;
-}
-
 .newBlogPostContainer .submitButton {
 	float: right;
 	margin-right: 10%;
@@ -530,4 +525,23 @@ hr.fadingStyle {
 
 .newBlogPostContainer input, .newBlogPostContainer textarea {
 	color: black;
+}
+
+.textUnderline {
+	text-decoration: underline;
+}
+
+.editButtonsRight {
+	float: right;
+	margin: 5px;
+}
+
+.editButtonsInList {
+	margin: 5px;
+	margin-left: 20px;
+}
+
+button {
+	background-color: black;
+	color: white;
 }

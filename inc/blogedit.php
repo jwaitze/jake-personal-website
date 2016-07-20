@@ -10,24 +10,24 @@
 		return;
 
 ?>
-				<h2 id="inlineElement">New Blog Post</h2>
+				<h2 id="inlineElement">Editing Blog Post</h2>
                 <div class="newBlogPostContainer">
-<?php
-
-        if(!empty($notice_to_display))
-                echo $notice_to_display;
-?>
-                	<form name="blogpost" action="index.php" method="post" accept-charset="utf-8">
+                	<form name="blogedit" action="index.php" method="post" accept-charset="utf-8">
                 		<ul>
                 			<li>
-                				<label for="blogtitle">Blog Title:</label>
-                				<input type="blogtitle" name="blogtitle" placeholder="Title" required>
-                			</li>
+                                                <label for="title">Title:</label>
+                                                <?php echo $temp2; ?>
+                                        </li>
+                                        <li>
+                                                <label for="dateposted">Date Posted:</label>
+                                                <?php echo substr($temp1, 0, 10); ?>
+                                        </li>
                 			<li>
-                				<label for="blogcontent">Blog Post:</label>
-                				<textarea type="blogcontent" name="blogcontent" placeholder="Put the post HTML in here... (be sure to use proper paragraphic formatting)" required></textarea>
+                				<label for="update">Content:</label>
+                				<textarea type="update" name="update" required><?php echo $temp3; ?></textarea>
                 			</li>
-                			<li class="submitButton"><input type="submit" value="Submit"></li>
+                                        <?php echo '<input type="hidden" name="post" value="' . $temp1 . '">'; ?>
+                			<li class="submitButton"><input type="submit" value="Update"></li>
                 		</ul>
                 	</form>
                 </div>

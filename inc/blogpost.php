@@ -20,12 +20,12 @@
                 	<form name="blogpost" action="index.php" method="post" accept-charset="utf-8">
                 		<ul>
                 			<li>
-                				<label for="blogtitle">Blog Title:</label>
-                				<input type="blogtitle" name="blogtitle" placeholder="Title" required />
+                				<label for="title">Title:</label>
+                				<input type="title" name="title" placeholder="Title" required />
                 			</li>
                 			<li>
-                				<label for="blogcontent">Blog Post:</label>
-                				<textarea type="blogcontent" name="blogcontent" placeholder="Put the post HTML in here... (be sure to use proper paragraphic formatting)" required></textarea>
+                				<label for="content">Content:</label>
+                				<textarea type="content" name="content" placeholder="Put the post HTML in here... (be sure to use proper paragraphic formatting)" required></textarea>
                 			</li>
                 			<li class="submitButton"><input type="submit" value="Submit"></li>
                 		</ul>

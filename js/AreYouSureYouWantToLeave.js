@@ -3,7 +3,7 @@ var confirmOnPageExit = function (e)
     // If we haven't been passed the event get the window.event
     e = e || window.event;
 
-    var message = 'You will disconnect from chat upon exiting. ';
+    var message = '';
 
     // For IE6-8 and Firefox prior to version 4
     if (e) 
