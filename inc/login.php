@@ -5,21 +5,13 @@
                 exit();
         }
 
-?>
-                <h2 id="inlineElement">Login</h2>
-<?php
-
         if($logged_in) {
-                echo "<p>Account</p>";
-                echo "<ul>";
-                echo '<li class="newBlogPost"><a href="../blogpost">Make a new blog post</a></li>';
-                echo '<li class="newBlogPost"><a href="http://webmail.waitze.net/" target="_blank">Check your email</a></li>';
-                echo "</ul>";
+                include_once("logged_in.php");
                 return;
         }
 
 ?>
-
+                <h2 id="inlineElement">Login</h2>
                 <div class="loginForm">
                         <form name="login" action="index.php" method="post" accept-charset="utf-8">
                 		<ul>
