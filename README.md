@@ -4,8 +4,8 @@
 - social profiles
 - work history
 - some projects
-- a blog
-- IRC
+- a blog (full CRUD functionality, coded in PHP using MySQLi)
+- IRC (running on unrealircd)
 
 Made using HTML5, CSS3, JS, and PHP.
 
