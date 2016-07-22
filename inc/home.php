@@ -5,10 +5,6 @@
 		exit();
 	}
 
-	// output actual content right here rather than the static example below
-	// perhaps an about, then an <hr>, then the last three most recent blog posts...
-	// definitely label the respective sections manually.
-
 ?>
 				<h1 id="inlineElement">Welcome to my personal site.</h1>
 				<p id="homeBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed lacus mollis, lobortis quam non, vestibulum sapien. Nam eu nibh sed velit tincidunt suscipit non vitae nunc. Suspendisse lorem sem, pharetra at erat non, suscipit gravida orci. Etiam ut ex id ligula lacinia sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec accumsan pharetra sagittis. Integer efficitur consequat mi, ut venenatis quam elementum rhoncus. Etiam sollicitudin semper mi. Ut id pulvinar tortor. Integer convallis sapien non dui porta, a aliquet enim feugiat. Phasellus vel massa non neque viverra lacinia id id augue.</p>
@@ -25,7 +21,8 @@
 
 	foreach($postrows as $postrow) {
 
-		OutputBlogPost($postrow['title'], $postrow['urlkey'], $postrow['content'], $postrow['author']);
+		OutputBlogPost($postrow['title'], $postrow['urlkey'], $postrow['content'], $postrow['author'], true);
+
 		if($postrow != end($postrows)) // add the line if it's not the last entry
 			echo '<hr class="fadingStyleRecentPosts">';
 	}

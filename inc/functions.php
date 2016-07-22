@@ -121,7 +121,7 @@
                 return "";
         }
 
-        function OutputBlogPost($title, $urlkey, $content, $author) {
+        function OutputBlogPost($title, $urlkey, $content, $author, $isRecentPost) {
                 echo '
         <div class="blogpost">
                 <a href="../blog/index.php?post=';
@@ -132,7 +132,18 @@
                 <p>Posted: ';
                 echo substr(urldecode($urlkey), 0, 10);
                 echo '</p>';
-                echo $content;
+
+                $processed_content = $content;
+                if($isRecentPost)
+                        $processed_content = substr($content, 0, 2500);
+
+                echo $processed_content;
+
+                if($processed_content != $content) {
+                        echo ' . . .';
+                        echo '<a class="readMore" href="#"><p>Read More</p></a>';
+                }
+
                 echo '        </div>';
         }
 

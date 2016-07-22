@@ -55,7 +55,7 @@
         if($logged_in)
         	$title = $postrow['title'] . $edit . $delete;
 
-		OutputBlogPost($title, $postrow['urlkey'], $postrow['content'], $postrow['author']);
+		OutputBlogPost($postrow['title'], $postrow['urlkey'], $postrow['content'], $postrow['author'], false);
 		if($postrow != end($postrows)) // add the line if it's not the last entry
 			echo "<hr>";
 	}
