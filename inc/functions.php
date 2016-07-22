@@ -1,8 +1,8 @@
 <?php
 
         function InsertBlogPost($mysqli, $title, $urlkey, $content, $author) {
-                $stmt = $mysqli->prepare("INSERT INTO `blogposts` (`title`, `urlkey`, `content`, `author`) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param('ssss', $title, $urlkey, $content, $author);
+                $stmt = $mysqli->prepare("INSERT INTO `blogposts` (`title`, `urlkey`, `content`, `author`, `time_added`) VALUES (?, ?, ?, ?, ?)");
+                $stmt->bind_param('ssssi', $title, $urlkey, $content, $author, time());
                 $stmt->execute();
 
                 $retval = false;
@@ -51,7 +51,7 @@
 
         function GetStoredPostsByRange($mysqli, $start, $amount) {
 
-                $stmt = $mysqli->prepare("SELECT title,content,author,urlkey FROM blogposts ORDER BY urlkey DESC LIMIT ?, ?");
+                $stmt = $mysqli->prepare("SELECT title,content,author,urlkey FROM blogposts ORDER BY time_added DESC LIMIT ?, ?");
                 $stmt->bind_param('ii', $start, $amount);
                 $stmt->execute();
 
