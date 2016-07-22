@@ -29,6 +29,14 @@
 		session_unset();
 
 	} else if(isset($_POST['username']) && isset($_POST['password'])) {
+
+		include_once '../securimage/securimage.php';
+		$securimage = new Securimage();
+		if ($securimage->check($_POST['captcha_code']) == false) {
+			$failed_captcha = true;
+			return;
+		}
+
 		// process new login
 		$stored_password = GetStoredPassword($mysqli, $_POST['username']);
 		if($stored_password == "") {

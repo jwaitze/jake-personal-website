@@ -6,8 +6,8 @@
 	}
 
 ?>
-				<h1 id="inlineElement">Welcome to my personal site.</h1>
-				<p id="homeBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed lacus mollis, lobortis quam non, vestibulum sapien. Nam eu nibh sed velit tincidunt suscipit non vitae nunc. Suspendisse lorem sem, pharetra at erat non, suscipit gravida orci. Etiam ut ex id ligula lacinia sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec accumsan pharetra sagittis. Integer efficitur consequat mi, ut venenatis quam elementum rhoncus. Etiam sollicitudin semper mi. Ut id pulvinar tortor. Integer convallis sapien non dui porta, a aliquet enim feugiat. Phasellus vel massa non neque viverra lacinia id id augue.</p>
+				<h1 id="inlineElement">Personal site</h1>
+				<p id="homeBody">This is the personal site of Jake Z Waitze. - The primary functions of this website are for showcasing some projects through blog posts and for having a place to consolidate contact information and various social media. This website is entirely <a class="textUnderline" href="https://github.com/jwaitze/Personal-Website" target="_blank">open source</a> and will be consistently updated for the next few months.</p>
 
 <?php
 

@@ -15,6 +15,7 @@
 	$logged_in = false;
 	$logged_in_as = "";
 	$failed_login = false;
+	$failed_captcha = false;
 	$notice_to_display ="";
 
 	$page_title = "Jake Waitze";
