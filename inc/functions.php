@@ -141,7 +141,9 @@
 
                 if($processed_content != $content) {
                         echo ' . . .';
-                        echo '<a class="readMore" href="#"><p>Read More</p></a>';
+                        echo '<a class="readMore" href="../blog/index.php?post=';
+                        echo urlencode($urlkey);
+                        echo '"><p>Read More</p></a>';
                 }
 
                 echo '        </div>';
