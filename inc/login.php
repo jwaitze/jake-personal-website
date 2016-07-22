@@ -10,6 +10,9 @@
                 return;
         }
 
+        if($failed_login)
+                echo '<p>Failed login attempt.</p>';
+
 ?>
                 <h2 id="inlineElement">Login</h2>
                 <div class="loginForm">

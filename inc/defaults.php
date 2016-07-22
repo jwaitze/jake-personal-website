@@ -7,10 +7,14 @@
 
 	include("../_config.php");
 
-	//error_reporting(E_ERROR | E_PARSE); // disable for development
+	error_reporting(E_ERROR | E_PARSE); // disable for development.
+	// people may try and invoke errors to divulge further info about the site
+	// don't let them get that far if it's even possible...
+	// (although this particular website is open source...)
 
 	$logged_in = false;
 	$logged_in_as = "";
+	$failed_login = false;
 	$notice_to_display ="";
 
 	$page_title = "Jake Waitze";

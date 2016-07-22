@@ -135,7 +135,7 @@
 
                 $processed_content = $content;
                 if($isRecentPost)
-                        $processed_content = substr($content, 0, 2500);
+                        $processed_content = substr($content, 0, 790);
 
                 echo $processed_content;
 

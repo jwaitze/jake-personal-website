@@ -31,8 +31,10 @@
 	} else if(isset($_POST['username']) && isset($_POST['password'])) {
 		// process new login
 		$stored_password = GetStoredPassword($mysqli, $_POST['username']);
-		if($stored_password == "") // no such user
+		if($stored_password == "") {
+			$failed_login = true;
 			return;
+		}
 		
 		// salted hashes not plain text
 		$check_password = trim(hash('sha512', $_POST['password'] . $_POST['password'] . "`^salt^`"));
@@ -43,6 +45,8 @@
 			$logged_in_as = $_POST['username'];
 			return;
 		}
+
+		$failed_login = true;
 		
 		session_unset();
 	}
