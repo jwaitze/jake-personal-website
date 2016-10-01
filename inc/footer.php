@@ -1,14 +1,16 @@
 <?php
-	
+
 	if(!isset($page_name)) { // redirect to home if visited directly
 		header("Location: ../home");
 		exit();
 	}
 
 ?>
-			</div>
-		</div>
-		<div class="mainFooter">
+
+	</div>
+</div>
+<div class="mainFooter">
+
 <?php
 
 	if($logged_in)
@@ -17,6 +19,7 @@
 		echo '<span class="loginFooter"><a href="../login">Login</a></span>';
 
 ?>
+
 		<span class="privacyFooter">2016 | <a href="../privacy-policy">Privacy Policy</a></span></div>
 
 		<!-- StatCounter -->

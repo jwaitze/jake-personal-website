@@ -190,9 +190,9 @@ html, body {
 /* apart from our menu items and default h3 settings, our other stuff
 	is always white, or should be, at least */
 #mainBody p, #mainBody li, #mainBody h3 {
-    text-indent: 25px;
-    line-height: 25px;
-    font-size: 1.1em;
+  text-indent: 25px;
+  line-height: 25px;
+  font-size: 1.1em;
 	color: #DCDCDC;
 }
 
@@ -202,8 +202,8 @@ html, body {
 
 .dropdown {
 	color: black;
-    position: relative;
-    display: inline;
+  position: relative;
+  display: inline;
 }
 
 .dropdown p {
@@ -219,7 +219,7 @@ html, body {
 	line-height: 10px
 }
 
-/* had to single out the tabs to separate selections between the tabs 
+/* had to single out the tabs to separate selections between the tabs
 	and the dropdown-content */
 .dropdown:hover .menuDropdownTab {
 	color: white;
@@ -275,19 +275,19 @@ html, body {
 
 /* thank to who suggested this @ A100 */
 hr.fadingStyle {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 /* flips the go icon a quarter ways around */
 .goIcon {
 	-ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
 }
 
 /* close and open button goes on the right side */
@@ -317,12 +317,12 @@ hr.fadingStyle {
 
 /* responsive to different device sizes */
 @media (max-width: 800px) {
-    html {
-    	font-size: 85%;
-    	line-height: 70%;
-    }
+  html {
+  	font-size: 85%;
+  	line-height: 70%;
+  }
 
-    .dropdown-content {
+  .dropdown-content {
 		min-width: 225px;
 		padding: 10px 10px 10px 15px;
 		background-color: black;
@@ -332,9 +332,9 @@ hr.fadingStyle {
 
 	.dropdown {
 		color: white;
-	    position: relative;
-	    display: inline;
-	    z-index: 5;
+	  position: relative;
+	  display: inline;
+	  z-index: 5;
 	}
 
 	.dropdown p {
@@ -393,12 +393,12 @@ hr.fadingStyle {
 }
 
 @media (min-width: 801px) {
-    html {
-    	font-size: 100%;
-    	line-height: 100%;
-    }
+  html {
+  	font-size: 100%;
+  	line-height: 100%;
+  }
 
-    .dropdown-content {
+  .dropdown-content {
 		min-width: 200px;
 	}
 
@@ -491,7 +491,7 @@ hr.fadingStyle {
 	/*width: 75%;
 	background: #999999;
 	opacity: 0.80;
-    filter: alpha(opacity=80);*/
+  filter: alpha(opacity=80);*/
 }
 
 /*label {
@@ -558,10 +558,10 @@ button {
 
 /* thank to who suggested this @ A100 */
 hr.fadingStyleRecentPosts {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0)); 
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(255,255,255,0.75), rgba(0,0,0,0));
 }

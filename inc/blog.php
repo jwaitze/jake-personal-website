@@ -1,5 +1,5 @@
 <?php
-	
+
 	if(!isset($page_name)) { // redirect to subdir if visited directly
 		header("Location: ../blog");
 		exit();
@@ -49,11 +49,11 @@
 
 	foreach($postrows as $postrow) {
 		$delete = '<a href="?delete=' . $postrow['urlkey'] . '"><button onclick="return confirm(\'Are you sure you want to delete?\')" class="editButtonsInList confirmButton">Delete</button></a>';
-        $edit = '<a href="?edit=' . $postrow['urlkey'] . '"><button class="editButtonsInList">Edit</button></a>';
+    $edit = '<a href="?edit=' . $postrow['urlkey'] . '"><button class="editButtonsInList">Edit</button></a>';
 
-        $title = $postrow['title'];
-        if($logged_in)
-    		$title = $postrow['title'] . $edit . $delete;
+    $title = $postrow['title'];
+    if($logged_in)
+    	$title = $postrow['title'] . $edit . $delete;
 
 		OutputBlogPost($title, $postrow['urlkey'], $postrow['content'], $postrow['author'], true);
 		if($postrow != end($postrows)) // add the line if it's not the last entry

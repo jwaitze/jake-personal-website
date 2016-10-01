@@ -5,6 +5,6 @@
 		"user" => "root",
 		"pass" => "",
 		"db" => "personalsite"
-		);
-
+	);
+	
 ?>
