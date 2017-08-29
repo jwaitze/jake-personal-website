@@ -62,7 +62,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`admin`, `username`, `password`) VALUES
-(1, 'jake', 'e9adadc0df5800f38905a89cbcece70e7cbfd2148f60318d0a890ad35fcdff559be926538b24cc40bd5d3fa6383024c20a2fb09c7936794cc93742ecb40b2c5f');
+(1, 'jake', 'fdd9fbf31813f97192caaa90ce974f65e756aef06b9a5ce705c2c5a422edb2fd904f3a6b27ee0a518f7fd3a662a2b8c99b764fb5bcc1437f8d829f04a527d4d4');
 
 --
 -- Indexes for dumped tables
