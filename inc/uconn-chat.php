@@ -8,6 +8,7 @@
 ?>
 
 <h2 id="inlineElement">UConn Chatroom</h2>
+<a href="full-page">(Click Here for Full Page Chat)</a>
 <iframe id="chatFrame" src="http://kiwiirc.com/client/irc.traject.io:+6697/uconn/" width="100%" height="750px"></iframe>
 <p>Server: irc.traject.io</p>
 <p>Port: 6667 (6697 SSL)</p>
